@@ -1,0 +1,273 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="in.ac.iiitkota.cairn.csr.android.ui.NewMilestoneActivity"
+    tools:showIn="@layout/activity_new_milestone">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:orientation="vertical">
+
+        <android.support.v7.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="0dp"
+            android:layout_marginLeft="6dp"
+            android:layout_marginRight="6dp"
+            android:layout_marginTop="10dp"
+            app:cardElevation="3dp">
+
+            <LinearLayout
+                android:id="@+id/milestone_text_holder"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingLeft="16dp"
+                android:paddingRight="16dp">
+
+                <!--dynamic text view will be added here-->
+
+            </LinearLayout>
+
+        </android.support.v7.widget.CardView>
+
+        <!--1-->
+        <android.support.v7.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp"
+            android:layout_marginLeft="6dp"
+            android:layout_marginRight="6dp"
+            android:layout_marginTop="5dp"
+            app:cardElevation="3dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingLeft="16dp"
+                android:paddingRight="16dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingBottom="5dp"
+                    android:paddingTop="10dp"
+                    android:text="Add new milestone"
+                    android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
+                    android:textColor="@color/colorAccent"
+                    android:textStyle="bold" />
+
+                <View
+                    android:layout_width="80dp"
+                    android:layout_height="3dp"
+                    android:background="@color/colorAccent"></View>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+
+                    android:weightSum="1">
+
+                    <MultiAutoCompleteTextView
+                        android:id="@+id/multi_auto_complete_text_view"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="10dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_weight="0.9"
+                        android:hint="Type a description"
+                        android:imeOptions="actionDone"
+
+                        android:paddingBottom="20dp"
+                        android:paddingTop="10dp"
+                        />
+
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </android.support.v7.widget.CardView>
+
+        <!--2-->
+        <android.support.v7.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="5dp"
+            android:layout_marginLeft="6dp"
+            android:layout_marginRight="6dp"
+            android:layout_marginTop="5dp"
+            app:cardElevation="3dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingLeft="16dp"
+                android:paddingRight="16dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingBottom="5dp"
+                    android:paddingTop="10dp"
+                    android:text="Number of Lives Touched"
+                    android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
+                    android:textColor="@color/colorAccent"
+                    android:textStyle="bold" />
+
+                <View
+                    android:layout_width="80dp"
+                    android:layout_height="3dp"
+                    android:background="@color/colorAccent"></View>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center_horizontal"
+                    android:orientation="horizontal">
+
+                    <com.jesusm.holocircleseekbar.lib.HoloCircleSeekBar
+                        android:id="@+id/picker"
+                        android:layout_width="wrap_content"
+                        android:layout_height="150sp"
+                        android:layout_centerInParent="true"
+                        app:init_position="0"
+                        app:end_angle="320"
+                        app:max="50"
+                        app:pointer_color="@color/colorAccent"
+                        app:pointer_halo_color="#88252525"
+                        app:pointer_size="10dp"
+                        app:text_color="@color/colorAccent"
+                        app:text_size="40sp"
+                        app:wheel_active_color="#00BFFF"
+                        app:wheel_unactive_color="#FFCCCCCC" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </android.support.v7.widget.CardView>
+
+        <!--3-->
+        <android.support.v7.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp"
+            android:layout_marginLeft="6dp"
+            android:layout_marginRight="6dp"
+            android:layout_marginTop="5dp"
+            app:cardElevation="3dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingLeft="16dp"
+                android:paddingRight="16dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingBottom="5dp"
+                    android:paddingTop="10dp"
+                    android:text="Add milestone images"
+                    android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
+                    android:textColor="@color/colorAccent"
+                    android:textStyle="bold" />
+
+                <View
+                    android:layout_width="80dp"
+                    android:layout_height="3dp"
+                    android:background="@color/colorAccent"></View>
+
+                <ImageView
+                    android:id="@+id/milestone_image"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:minHeight="100dp"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginTop="10dp"
+                    android:adjustViewBounds="true"
+                    android:background="@drawable/custom_rectangle_shape"
+                    android:maxHeight="200dp"
+                    android:scaleType="center"
+                    android:src="@drawable/ic_add_black_24dp" />
+
+            </LinearLayout>
+
+        </android.support.v7.widget.CardView>
+
+        <!--4-->
+        <android.support.v7.widget.CardView
+            android:id="@+id/sharing_card"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp"
+            android:layout_marginLeft="6dp"
+            android:layout_marginRight="6dp"
+            android:layout_marginTop="5dp"
+            app:cardElevation="3dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingLeft="16dp"
+                android:paddingRight="16dp"
+                android:layout_marginBottom="4dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingBottom="5dp"
+                    android:paddingTop="10dp"
+                    android:text="Sharing option"
+                    android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
+                    android:textColor="@color/colorAccent"
+                    android:textStyle="bold" />
+
+                <View
+                    android:layout_width="80dp"
+                    android:layout_height="3dp"
+                    android:background="@color/colorAccent"></View>
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/recycler_view_share_with"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"></android.support.v7.widget.RecyclerView>
+
+            </LinearLayout>
+
+        </android.support.v7.widget.CardView>
+
+        <!--5-->
+        <ProgressBar
+            android:id="@+id/milestone_progressbar"
+            style="?android:attr/progressBarStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <Button
+            android:id="@+id/submit_milestone_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:background="@color/colorAccent"
+            android:padding="@dimen/button_padding"
+            android:text="Submit Milestone"
+            android:textColor="@android:color/white"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+
+</android.support.v4.widget.NestedScrollView>

@@ -1,0 +1,250 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    android:gravity="center"
+    android:orientation="vertical"
+    tools:context="com.iiitkota.cairn.csr.android.ac.iiitkota.cairn.csr.android.ui.LoginActivity">
+
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginTop="16dp"
+        app:cardElevation="3dp">
+
+        <android.support.v4.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:id="@+id/data_holder"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center_horizontal"
+                android:orientation="vertical">
+
+                <!--logo-->
+                <ImageView
+                    android:layout_width="@dimen/login_logo_width"
+                    android:layout_height="@dimen/login_logo_height"
+                    android:src="@mipmap/logo"
+                    android:transitionName="logo_transition" />
+
+                <!--Registration label holder-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:orientation="horizontal">
+
+                    <View
+                        android:layout_width="5dp"
+                        android:layout_height="match_parent"
+                        android:background="@color/colorAccent"></View>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="@dimen/content_margin_left"
+                        android:text="REGISTRATION"
+                        android:textAppearance="@style/Base.TextAppearance.AppCompat.Display1"
+                        android:textColor="@color/colorAccent"
+                        android:textStyle="bold" />
+
+                </LinearLayout>
+
+                <!--Registration email, next button holder-->
+                <LinearLayout
+                    android:id="@+id/reg_email_button_holder"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:visibility="visible">
+
+                    <!--Registration email holder-->
+                    <android.support.design.widget.TextInputLayout
+
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/content_margin_left"
+                        android:layout_marginRight="@dimen/content_margin_right"
+                        android:layout_marginTop="@dimen/content_margin_top">
+
+                        <EditText
+                            android:id="@+id/reg_email"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:hint="@string/reg_email_hint"
+                            android:inputType="textEmailAddress"
+                            android:paddingBottom="16dp"
+                            android:paddingTop="16dp" />
+
+                    </android.support.design.widget.TextInputLayout>
+
+                    <!--Next button-->
+                    <Button
+                        android:id="@+id/reg_next_button"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="@dimen/content_margin_top"
+                        android:layout_marginLeft="@dimen/content_margin_left"
+                        android:layout_marginRight="@dimen/content_margin_right"
+                        android:layout_marginTop="26dp"
+                        android:background="@color/colorAccent"
+                        android:padding="@dimen/button_padding"
+                        android:text="Next"
+                        android:textColor="@android:color/white"
+                        android:textStyle="bold" />
+
+                </LinearLayout>
+
+                <!--Name, department, contact, password holder-->
+                <LinearLayout
+                    android:id="@+id/reg_rest_data_holder"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+
+                    <!--Name holder-->
+                    <android.support.design.widget.TextInputLayout
+                        android:id="@+id/reg_name_holder"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/content_margin_left"
+                        android:layout_marginRight="@dimen/content_margin_right"
+                        android:layout_marginTop="@dimen/content_margin_top">
+
+                        <!--Name-->
+                        <EditText
+                            android:id="@+id/reg_name"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:hint="@string/reg_name_hint"
+                            android:inputType="text"
+                            android:paddingBottom="16dp"
+                            android:paddingTop="16dp" />
+
+                    </android.support.design.widget.TextInputLayout>
+
+
+                    <!--Department holder-->
+                    <android.support.design.widget.TextInputLayout
+                        android:id="@+id/reg_department_holder"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/content_margin_left"
+                        android:layout_marginRight="@dimen/content_margin_right"
+                        android:layout_marginTop="@dimen/content_margin_top">
+
+                        <!--Department-->
+                        <EditText
+                            android:id="@+id/reg_department"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:hint="@string/reg_department_hint"
+                            android:inputType="text"
+                            android:paddingBottom="16dp"
+                            android:paddingTop="16dp" />
+
+                    </android.support.design.widget.TextInputLayout>
+
+
+                    <!--Contact holder-->
+                    <android.support.design.widget.TextInputLayout
+                        android:id="@+id/reg_contact_holder"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/content_margin_left"
+                        android:layout_marginRight="@dimen/content_margin_right"
+                        android:layout_marginTop="@dimen/content_margin_top">
+
+                        <!--Contact-->
+                        <EditText
+                            android:id="@+id/reg_contact"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:hint="@string/reg_contact_hint"
+                            android:inputType="phone"
+                            android:paddingBottom="16dp"
+                            android:paddingTop="16dp" />
+
+                    </android.support.design.widget.TextInputLayout>
+
+                    <!--Password holder-->
+                    <android.support.design.widget.TextInputLayout
+                        android:id="@+id/reg_password_holder"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/content_margin_left"
+                        android:layout_marginRight="@dimen/content_margin_right"
+                        android:layout_marginTop="@dimen/content_margin_top"
+                        app:passwordToggleEnabled="true"
+                        app:passwordToggleTint="@color/colorAccent">
+
+                        <!--Password-->
+                        <EditText
+                            android:id="@+id/reg_password"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:hint="@string/reg_password_hint"
+                            android:inputType="textPassword"
+                            android:paddingBottom="16dp"
+                            android:paddingTop="16dp" />
+
+                    </android.support.design.widget.TextInputLayout>
+
+                    <!--Repeat Password holder-->
+                    <android.support.design.widget.TextInputLayout
+                        android:id="@+id/reg_repeat_password_holder"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/content_margin_left"
+                        android:layout_marginRight="@dimen/content_margin_right"
+                        android:layout_marginTop="@dimen/content_margin_top"
+                        app:passwordToggleEnabled="true"
+                        app:passwordToggleTint="@color/colorAccent">
+
+                        <!--Repeat Password-->
+                        <EditText
+                            android:id="@+id/reg_repeat_password"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:hint="@string/reg_confirm_password_hint"
+                            android:inputType="textPassword"
+                            android:paddingBottom="16dp"
+                            android:paddingTop="16dp" />
+
+                    </android.support.design.widget.TextInputLayout>
+
+                    <!--Registration button-->
+                    <Button
+                        android:id="@+id/register_button"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="@dimen/content_margin_top"
+                        android:layout_marginLeft="@dimen/content_margin_left"
+                        android:layout_marginRight="@dimen/content_margin_right"
+                        android:layout_marginTop="26dp"
+                        android:background="@color/colorAccent"
+                        android:padding="@dimen/button_padding"
+                        android:text="Register"
+                        android:textColor="@android:color/white"
+                        android:textStyle="bold" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </android.support.v4.widget.NestedScrollView>
+
+    </android.support.v7.widget.CardView>
+
+
+</LinearLayout>

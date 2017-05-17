@@ -1,0 +1,77 @@
+<!DOCTYPE resources [<!ENTITY server "139.59.1.193:8080/CairnCSR/rest/"><!ENTITY image_server "139.59.1.193:8080/CairnCSR/images/"><!ENTITY profile_server "139.59.1.193:8080/CairnCSR/profile_pictures/">]>
+
+<resources>
+    <string name="app_name">Cairn CSR</string>
+    <string name="login_url">http://&server;AuthenticationService/Login</string>
+    <string name="change_password_url">http://&server;AuthenticationService/updatePassword</string>
+    <string name="register_url">http://&server;AuthenticationService/register</string>
+    <string name="retrieve_profile">http://&server;AuthenticationService/RetrieveUserProfile/</string>
+    <string name="update_profile_picture">http://&server;AuthenticationService/updateProfilePic/</string>
+    <string name="retrieve_user_statistics">http://&server;StatisticsService/getStatistics/</string>
+    <string name="retrieve_news_feed">http://&server;NewsfeedService/RetrieveNewsfeedPosts/</string>
+    <string name="retrieve_author_feed">http://&server;NewsfeedService/RetrieveAuthorPosts/</string>
+    <string name="add_post">http://&server;PostService/addPost/</string>
+    <string name="update_post">http://&server;PostService/updatePost</string>
+    <string name="delete_post">http://&server;PostService/deletePost</string>
+    <string name="retrieve_comments">http://&server;PostService/RetrievePostComments/</string>
+    <string name="add_comment">http://&server;PostService/addComment/</string>
+    <string name="delete_comment">http://&server;PostService/deleteComment/</string>
+    <string name="retrieve_teams">http://&server;TeamService/RetrieveUserTeams/</string>
+    <string name="retrieve_messages">http://&server;TeamService/RetrieveTeamMessages/</string>
+    <string name="send_message">http://&server;TeamService/AddTeamMessage</string>
+    <string name="get_feedback">http://&server;FeedbackService/getFeedback/</string>
+    <string name="update_feedback">http://&server;FeedbackService/updateFeedback/</string>
+    <string name="set_like">http://&server;PostService/AddLike/</string>
+    <string name="share_post">http://&server;PostService/SharePost/</string>
+    <string name="images">http://&image_server;/</string>
+    <string name="profile_images">http://&profile_server;/</string>
+
+    <string name="retrieve_nandgrams">http://&server;NandgramService/getNandgramList/</string>
+    <string name="insert_attendance">http://&server;NandgramService/addAttendance/</string>
+
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <string name="action_settings">Settings</string>
+    <string name="login_email_hint">Email</string>
+    <string name="login_password_hint">Password</string>
+    <string name="reg_email_hint">Email</string>
+    <string name="reg_name_hint">Name</string>
+    <string name="reg_department_hint">Department</string>
+    <string name="reg_contact_hint">Contact</string>
+    <string name="reg_password_hint">Password</string>
+    <string name="reg_confirm_password_hint">Confirm password</string>
+    <string name="otp_hint">Enter OTP</string>
+    <string name="otp_instructions">(OTP has been sent to the entered email, check your inbox)</string>
+    <string name="action_newsfeed">Newsfeed</string>
+    <string name="action_my_activity">MyActivity</string>
+    <string name="action_messages">Messages</string>
+    <string name="action_profile">Profile</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="newsfeed_dummy_description">This is dummy descriptoin ...</string>
+    <string name="dummy_summary">Working as a software developer on Android platform</string>
+    <string name="title_activity_new_milestone">NewMilestoneActivity</string>
+    <string name="title_activity_message">MessageActivity</string>
+    <string name="department_hint">New department</string>
+    <string name="summary_hint">Update summary</string>
+    <string name="title_activity_other_user_profile">OtherUserProfileActivity</string>
+    <string name="title_activity_team_profile">TeamProfileActivity</string>
+    <string name="action_feedback">Feedback</string>
+    <string name="action_add_milestone">Add milestone</string>
+    <string name="action_edit">Edit</string>
+    <string name="action_delete">Delete</string>
+    <string name="action_share_on_media">Share On Media</string>
+    <string name="reset_password_email_hint">Email to send OTP</string>
+    <string name="new_password_hint">New password</string>
+    <string name="repeat_password_hint">Repeat password</string>
+    <string name="current_password_hint">Current password</string>
+    <string name="title_activity_add_attendence">AddAttendence</string>
+    <string name="title_activity_nandgram_stats">NandGharStatsActivity</string>
+    <string name="title_activity_face_detect">FaceDetect</string>
+    <string name="title_activity_nandgram_list">NandGharListActivity</string>
+    <string name="dummy_nandgram_address">Hostel Aurobindo, MNIT Jaipur, JLN Road, Malaviya Nagar, Jaipur, Rajasthan</string>
+    <string name="title_activity_nand_ghar_per_day_stats">NandGharPerDayStats</string>
+</resources>

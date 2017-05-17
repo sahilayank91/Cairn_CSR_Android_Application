@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="in.ac.iiitkota.cairn.csr.android.ui.SplashActivity"
+    android:gravity="center"
+    android:background="@android:color/white">
+
+    <ImageView
+        android:layout_width="@dimen/splash_logo_width"
+        android:layout_height="@dimen/splash_logo_height"
+        android:src="@mipmap/logo"/>
+
+</LinearLayout>

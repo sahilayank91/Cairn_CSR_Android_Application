@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="60dp"
+    android:paddingLeft="16dp"
+    android:paddingRight="16dp"
+    android:gravity="center_vertical">
+
+    <View
+        android:layout_width="10dp"
+        android:layout_height="10dp"
+        android:background="@color/colorAccent"></View>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Suggestion"
+        android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
+        android:textColor="@android:color/background_dark"
+        android:layout_marginLeft="10dp"
+        android:id="@+id/suggestion_text"/>
+
+</LinearLayout>

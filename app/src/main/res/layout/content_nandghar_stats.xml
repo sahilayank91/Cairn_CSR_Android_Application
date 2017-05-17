@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="in.ac.iiitkota.cairn.csr.android.ui.NandGharStatsActivity"
+    tools:showIn="@layout/activity_nandghar_stats"
+    android:id="@+id/parent_scrollview">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:animateLayoutChanges="true">
+
+        <!--1-->
+        <android.support.v7.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp"
+            android:layout_marginLeft="6dp"
+            android:layout_marginRight="6dp"
+            android:layout_marginTop="5dp"
+            app:cardElevation="3dp"
+            android:id="@+id/graph_holder">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <android.support.v4.view.ViewPager
+                    android:id="@+id/viewpager_profile"
+                    android:layout_width="match_parent"
+                    android:layout_height="230dp"></android.support.v4.view.ViewPager>
+
+                <me.relex.circleindicator.CircleIndicator
+                    android:id="@+id/indicator"
+                    android:layout_width="match_parent"
+                    android:layout_height="19dp"
+                    app:ci_drawable="@color/colorAccent" />
+
+            </LinearLayout>
+
+        </android.support.v7.widget.CardView>
+
+
+        <!--2-->
+        <android.support.v7.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp"
+            android:layout_marginLeft="6dp"
+            android:layout_marginRight="6dp"
+            android:layout_marginTop="5dp"
+            app:cardElevation="3dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:clickable="true"
+                android:id="@+id/day_viz_stats_holder">
+
+                <ImageView
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:layout_margin="10dp"
+                    android:src="@drawable/calendar_icon"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Per Day Stats"
+                    android:textSize="30sp"
+                    android:textColor="@color/colorAccent"
+                    android:textStyle="bold"/>
+                
+            </LinearLayout>
+
+        </android.support.v7.widget.CardView>
+        
+    </LinearLayout>
+
+</android.support.v4.widget.NestedScrollView>

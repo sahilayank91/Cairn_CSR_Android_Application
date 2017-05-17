@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:weightSum="1"
+    android:layout_marginTop="10dp">
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="0.8"
+        android:orientation="vertical"
+        android:background="@color/message_background_color">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="4dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="sender name"
+                android:textColor="@android:color/white"
+                android:id="@+id/message_sender"
+                android:maxLines="1"
+                android:ellipsize="end"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="02/03/2017"
+                android:textColor="@android:color/white"
+                android:id="@+id/message_date"
+                android:gravity="right"
+                android:maxLines="1"
+                android:ellipsize="end"/>
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.05dp"
+            android:background="@android:color/darker_gray"></View>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minHeight="60dp"
+            android:text="SS Verma working on messaging UI ... "
+            android:textColor="@android:color/white"
+            android:gravity="center"
+            android:textStyle="bold"
+            android:id="@+id/message_text"/>
+
+    </LinearLayout>
+
+    <ImageView
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="0.1"
+        android:scaleType="fitXY"
+        android:src="@drawable/icon_arrow_message_right"
+        android:tint="@color/message_background_color"/>
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:layout_width="0dp"
+        android:layout_height="30dp"
+        android:layout_weight="0.1"
+        android:src="@drawable/profile_image_place_holder"
+        android:id="@+id/message_profile_image"/>
+
+</LinearLayout>

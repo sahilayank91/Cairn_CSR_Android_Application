@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "112654883325",
+    "firebase_url": "https://cairn-india-csr-app-b1b1b.firebaseio.com",
+    "project_id": "cairn-india-csr-app-b1b1b",
+    "storage_bucket": "cairn-india-csr-app-b1b1b.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:112654883325:android:f7f5cd753863dd1e",
+        "android_client_info": {
+          "package_name": "in.ac.iiitkota.cairn.csr.android"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "112654883325-kf6hci7v8qejkci88he53hin61f7uoat.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBGM6KN4kHPN2zmgNLbfyUWRxwpuIETH08"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

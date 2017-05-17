@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="in.ac.iiitkota.cairn.csr.android.ui.AddAttendance"
+    tools:showIn="@layout/activity_add_attendance">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <!--1-->
+        <android.support.v7.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp"
+            android:layout_marginLeft="6dp"
+            android:layout_marginRight="6dp"
+            android:layout_marginTop="5dp"
+            app:cardElevation="3dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingLeft="16dp"
+                android:paddingRight="16dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingBottom="5dp"
+                    android:paddingTop="10dp"
+                    android:text="Capture image"
+                    android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
+                    android:textColor="@color/colorAccent"
+                    android:textStyle="bold" />
+
+                <View
+                    android:layout_width="80dp"
+                    android:layout_height="3dp"
+                    android:background="@color/colorAccent"></View>
+
+                <ImageView
+                    android:id="@+id/capture_image"
+                    android:layout_width="match_parent"
+                    android:layout_height="180dp"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginTop="10dp"
+                    android:adjustViewBounds="true"
+                    android:background="@drawable/custom_rectangle_shape"
+                    android:maxHeight="200dp"
+                    android:scaleType="center"
+                    android:src="@drawable/ic_menu_camera"/>
+
+                <TextView
+                    android:id="@+id/face_detection_text"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingBottom="5dp"
+                    android:paddingTop="10dp"
+                    android:text="1 Face detected"
+                    android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
+                    android:textColor="@color/colorAccent"
+                    android:textStyle="bold"
+                    android:visibility="gone" />
+
+                <View
+                    android:id="@+id/view"
+                    android:layout_width="80dp"
+                    android:layout_height="3dp"
+                    android:background="@color/colorAccent"></View>
+
+                <in.ac.iiitkota.cairn.csr.android.face_detection.FaceOverlayView xmlns:android="http://schemas.android.com/apk/res/android"
+                    android:id="@+id/face_overlay"
+                    android:layout_width="match_parent"
+                    android:layout_height="180dp"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginTop="10dp"
+                    android:maxHeight="200dp"
+                    android:visibility="gone" />
+
+            </LinearLayout>
+
+        </android.support.v7.widget.CardView>
+
+
+        <!--2-->
+        <android.support.v7.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp"
+            android:layout_marginLeft="6dp"
+            android:layout_marginRight="6dp"
+            android:layout_marginTop="5dp"
+            app:cardElevation="3dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingLeft="16dp"
+                android:paddingRight="16dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingBottom="5dp"
+                    android:paddingTop="10dp"
+                    android:text="Location"
+                    android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
+                    android:textColor="@color/colorAccent"
+                    android:textStyle="bold" />
+
+                <View
+                    android:layout_width="80dp"
+                    android:layout_height="3dp"
+                    android:background="@color/colorAccent"></View>
+                <ProgressBar
+                    android:id="@+id/locationProgressBar"
+                    style="?android:attr/progressBarStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+                <fragment
+                    android:id="@+id/mapView"
+                    android:layout_width="match_parent"
+                    android:layout_height="280dp"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginTop="10dp"
+                    android:adjustViewBounds="true"
+                    android:maxHeight="200dp"
+                    class="com.google.android.gms.maps.SupportMapFragment"
+                    />
+
+
+
+            </LinearLayout>
+
+        </android.support.v7.widget.CardView>
+
+
+        <!--3-->
+        <android.support.v7.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp"
+            android:layout_marginLeft="6dp"
+            android:layout_marginRight="6dp"
+            android:layout_marginTop="5dp"
+            app:cardElevation="3dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingLeft="16dp"
+                android:paddingRight="16dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingBottom="5dp"
+                    android:paddingTop="10dp"
+                    android:text="Summary"
+                    android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
+                    android:textColor="@color/colorAccent"
+                    android:textStyle="bold" />
+
+                <View
+                    android:layout_width="80dp"
+                    android:layout_height="3dp"
+                    android:background="@color/colorAccent"></View>
+
+                <TextView
+                    android:id="@+id/summary"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginTop="10dp"
+                    android:text="@string/dummy_summary"/>
+
+            </LinearLayout>
+
+        </android.support.v7.widget.CardView>
+
+        <!--4-->
+        <ProgressBar
+            android:id="@+id/progressBar"
+            style="?android:attr/progressBarStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <Button
+            android:id="@+id/submit_attendance"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:background="@color/colorAccent"
+            android:padding="@dimen/button_padding"
+            android:text="Submit attendance"
+            android:textColor="@android:color/white"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+
+</android.support.v4.widget.NestedScrollView>

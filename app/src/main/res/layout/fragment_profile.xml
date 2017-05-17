@@ -1,0 +1,229 @@
+<android.support.v4.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    tools:context="in.ac.iiitkota.cairn.csr.android.ui.fragments.ProfileFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_marginLeft="6dp"
+        android:layout_marginRight="6dp">
+
+        <!--1-->
+        <android.support.v7.widget.CardView
+            android:id="@+id/data_holder"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:layout_marginTop="10dp"
+            app:cardElevation="3dp">
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <!--1-->
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/profile_image"
+                    android:layout_width="@dimen/profile_image_width"
+                    android:layout_height="@dimen/profile_image_height"
+                    android:layout_gravity="center_horizontal"
+                    android:padding="10dp"
+                    android:src="@drawable/profile_image_place_holder"
+                    app:civ_border_color="@color/colorAccent"
+                    app:civ_border_width="1dp" />
+
+                <!--2-->
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="6dp">
+
+                    <TextView
+                        android:id="@+id/profile_name"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:ellipsize="marquee"
+                        android:gravity="center"
+                        android:maxLines="2"
+                        android:text=""
+                        android:textAppearance="@style/Base.TextAppearance.AppCompat.Title"
+                        android:textColor="@color/colorAccent" />
+
+                    <ImageView
+                        android:id="@+id/profile_edit_icon"
+                        android:layout_width="35dp"
+                        android:layout_height="35dp"
+                        android:layout_gravity="center_vertical|right"
+                        android:layout_marginRight="5dp"
+                        android:background="?attr/selectableItemBackgroundBorderless"
+                        android:src="@drawable/ic_edit_black_24dp"
+                        android:tint="@color/colorAccent" />
+
+                </FrameLayout>
+
+                <!--3-->
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.05dp"
+                    android:layout_marginBottom="3dp"
+                    android:layout_marginTop="3dp"
+                    android:background="@android:color/darker_gray"></View>
+
+                <!--4-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:paddingLeft="16dp"
+                    android:paddingRight="16dp">
+
+                    <!--Department label-->
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:drawableLeft="@drawable/ic_department_black_24dp"
+                        android:drawablePadding="5dp"
+                        android:gravity="center_vertical"
+                        android:paddingBottom="5dp"
+                        android:paddingTop="10dp"
+                        android:text="DEPARTMENT"
+                        android:textAppearance="@style/Base.TextAppearance.AppCompat.Body1"
+                        android:textColor="@android:color/background_dark"
+                        android:textStyle="bold" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="0.05dp"
+                        android:layout_marginBottom="14dp"
+                        android:layout_marginTop="6dp"
+                        android:background="@android:color/darker_gray"></View>
+
+                    <!--Department text-->
+                    <TextView
+                        android:id="@+id/profile_department_name"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingLeft="0dp"
+                        android:paddingTop="0dp"
+                        android:text=""
+                        android:textAppearance="@style/Base.TextAppearance.AppCompat.Body2"
+                        android:textColor="@color/profile_value_text_color"
+                        android:textStyle="normal" />
+
+                    <!--Member since label-->
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:drawableLeft="@drawable/ic_member_since_black_24dp"
+                        android:drawablePadding="5dp"
+                        android:gravity="center_vertical"
+                        android:paddingBottom="5dp"
+                        android:paddingTop="16dp"
+                        android:text="MEMBER SINCE"
+                        android:textAppearance="@style/Base.TextAppearance.AppCompat.Body1"
+                        android:textColor="@android:color/background_dark"
+                        android:textStyle="bold" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="0.05dp"
+                        android:layout_marginBottom="14dp"
+                        android:layout_marginTop="6dp"
+                        android:background="@android:color/darker_gray"></View>
+
+                    <!--Department text-->
+                    <TextView
+                        android:id="@+id/profile_member_since"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingLeft="0dp"
+                        android:text=""
+                        android:textAppearance="@style/Base.TextAppearance.AppCompat.Body2"
+                        android:textColor="@color/profile_value_text_color"
+                        android:textStyle="normal" />
+
+                    <!--Summary label-->
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:drawableLeft="@drawable/ic_summary_black_24dp"
+                        android:drawablePadding="5dp"
+                        android:gravity="center_vertical"
+                        android:paddingBottom="5dp"
+                        android:paddingTop="16dp"
+                        android:text="SUMMARY"
+                        android:textAppearance="@style/Base.TextAppearance.AppCompat.Body1"
+                        android:textColor="@android:color/background_dark"
+                        android:textStyle="bold" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="0.05dp"
+                        android:layout_marginBottom="14dp"
+                        android:layout_marginTop="6dp"
+                        android:background="@android:color/darker_gray"></View>
+
+                    <!--Summary text-->
+                    <TextView
+                        android:id="@+id/profile_summary"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="16dp"
+                        android:paddingLeft="0dp"
+                        android:text=""
+                        android:textAppearance="@style/Base.TextAppearance.AppCompat.Body2"
+                        android:textColor="@color/profile_value_text_color"
+                        android:textStyle="normal" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </android.support.v7.widget.CardView>
+
+
+        <!--2-->
+        <android.support.v7.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6dp"
+            app:cardCornerRadius="0dp"
+            app:cardElevation="3dp"
+            android:layout_marginBottom="16dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <android.support.v4.view.ViewPager
+                    android:id="@+id/viewpager_profile"
+                    android:layout_width="match_parent"
+                    android:layout_height="230dp"></android.support.v4.view.ViewPager>
+
+                <me.relex.circleindicator.CircleIndicator
+                    android:id="@+id/indicator"
+                    android:layout_width="match_parent"
+                    android:layout_height="19dp"
+                    app:ci_drawable="@color/colorAccent" />
+
+            </LinearLayout>
+
+        </android.support.v7.widget.CardView>
+
+        <!--3-->
+        <include layout="@layout/table_layout"
+            android:layout_marginBottom="66dp"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"></include>
+
+    </LinearLayout>
+
+</android.support.v4.widget.NestedScrollView>

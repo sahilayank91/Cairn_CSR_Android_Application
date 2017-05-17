@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#ffffff</color>
+    <color name="colorPrimaryDark">#69696b</color>
+    <color name="colorAccent">#052081</color><!--#0e159c-->
+
+    <color name="profile_value_text_color">#44484b</color>
+    <color name="message_background_color">#ffffff</color>
+    <color name="color_smiley_neutral">#da0c10</color>
+    <color name="color_smiley_satisfied">#ccde09</color>
+    <color name="color_smiley_very_satisfied">#1c8016</color>
+    <color name="comment_background_color">#3b3b39</color>
+    <color name="message_text_color">#1c1c1d</color>
+</resources>

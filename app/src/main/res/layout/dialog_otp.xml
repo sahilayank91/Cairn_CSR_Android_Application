@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:minWidth="250dp"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center_horizontal">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:orientation="vertical"
+        android:background="@color/colorAccent"
+        android:gravity="center">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="OTP"
+            android:textAppearance="@style/Base.TextAppearance.AppCompat.Display1"
+            android:textColor="@android:color/white"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="@string/otp_instructions"
+            android:textColor="@android:color/white"
+            android:layout_marginTop="4dp"
+            android:id="@+id/otp_instruction"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:id="@+id/otp_content_holder">
+
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/content_margin_left"
+            android:layout_marginRight="@dimen/content_margin_right"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:id="@+id/otp_holder">
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/et_otp"
+                android:hint="@string/otp_hint"
+                android:padding="20dp"/>
+
+        </android.support.design.widget.TextInputLayout>
+
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/custom_rectangle_shape"
+            android:text="Verify"
+            android:textStyle="bold"
+            android:textColor="@color/colorAccent"
+            android:layout_marginLeft="@dimen/content_margin_left"
+            android:layout_marginRight="@dimen/content_margin_right"
+            android:layout_marginBottom="@dimen/content_margin_top"
+            android:id="@+id/btn_verify"/>
+
+    </LinearLayout>
+
+    <ProgressBar
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="@dimen/content_margin_top"
+        android:id="@+id/progressbar"
+        android:visibility="gone"
+        android:layout_marginBottom="@dimen/content_margin_top"/>
+
+</LinearLayout>

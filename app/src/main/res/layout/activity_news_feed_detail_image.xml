@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="in.ac.iiitkota.cairn.csr.android.ui.NewsFeedDetailImage"
+    >
+    <TextView
+        android:id="@+id/newsfeed_detail_title"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_gravity="bottom"
+        android:layout_weight="0.2"
+        android:background="@android:color/background_dark"
+        android:ellipsize="end"
+        android:gravity="center"
+        android:maxLines="3"
+        android:text=""
+        android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
+        android:textColor="@android:color/white" />
+
+    <ImageView
+        android:id="@+id/newsfeed_detail_image"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:layout_weight="0.5"
+        android:adjustViewBounds="true"
+        android:background="@android:color/darker_gray"
+        android:scaleType="fitCenter"
+        android:transitionName="image_transition" />
+
+    <TextView
+        android:id="@+id/newsfeed_detail_caption"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_gravity="bottom"
+        android:layout_weight="0.2"
+        android:background="@android:color/background_dark"
+        android:ellipsize="end"
+        android:gravity="center"
+        android:maxLines="3"
+        android:text="Image caption"
+        android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
+        android:textColor="@android:color/white" />
+
+</LinearLayout>

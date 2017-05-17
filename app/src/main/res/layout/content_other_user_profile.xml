@@ -1,0 +1,183 @@
+<android.support.v4.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="in.ac.iiitkota.cairn.csr.android.ui.fragments.ProfileFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:orientation="vertical">
+
+        <!--1-->
+        <android.support.v7.widget.CardView
+            android:id="@+id/data_holder"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:layout_marginTop="10dp"
+            app:cardElevation="3dp"
+            app:cardCornerRadius="0dp">
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <!--4-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:paddingLeft="16dp"
+                    android:paddingRight="16dp">
+
+                    <!--Department label-->
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:drawableLeft="@drawable/ic_department_black_24dp"
+                        android:drawablePadding="5dp"
+                        android:gravity="center_vertical"
+                        android:paddingBottom="5dp"
+                        android:paddingTop="10dp"
+                        android:text="DEPARTMENT"
+                        android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
+                        android:textColor="@android:color/background_dark"
+                        android:textStyle="bold" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="0.05dp"
+                        android:layout_marginBottom="14dp"
+                        android:layout_marginTop="6dp"
+                        android:background="@android:color/darker_gray"></View>
+
+                    <!--Department text-->
+                    <TextView
+                        android:id="@+id/profile_department_name"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingLeft="0dp"
+                        android:paddingTop="0dp"
+                        android:text=""
+                        android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
+                        android:textColor="@color/profile_value_text_color"
+                        android:textStyle="normal" />
+
+                    <!--Member since label-->
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:drawableLeft="@drawable/ic_member_since_black_24dp"
+                        android:drawablePadding="5dp"
+                        android:gravity="center_vertical"
+                        android:paddingBottom="5dp"
+                        android:paddingTop="16dp"
+                        android:text="MEMBER SINCE"
+                        android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
+                        android:textColor="@android:color/background_dark"
+                        android:textStyle="bold" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="0.05dp"
+                        android:layout_marginBottom="14dp"
+                        android:layout_marginTop="6dp"
+                        android:background="@android:color/darker_gray"></View>
+
+                    <!--Department text-->
+                    <TextView
+                        android:id="@+id/profile_member_since"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingLeft="0dp"
+                        android:text=""
+                        android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
+                        android:textColor="@color/profile_value_text_color"
+                        android:textStyle="normal" />
+
+                    <!--Summary label-->
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:drawableLeft="@drawable/ic_summary_black_24dp"
+                        android:drawablePadding="5dp"
+                        android:gravity="center_vertical"
+                        android:paddingBottom="5dp"
+                        android:paddingTop="16dp"
+                        android:text="SUMMARY"
+                        android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
+                        android:textColor="@android:color/background_dark"
+                        android:textStyle="bold" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="0.05dp"
+                        android:layout_marginBottom="14dp"
+                        android:layout_marginTop="6dp"
+                        android:background="@android:color/darker_gray"></View>
+
+                    <!--Summary text-->
+                    <TextView
+                        android:id="@+id/profile_summary"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="16dp"
+                        android:paddingLeft="0dp"
+                        android:text=""
+                        android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
+                        android:textColor="@color/profile_value_text_color"
+                        android:textStyle="normal" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </android.support.v7.widget.CardView>
+
+
+        <!--2-->
+        <android.support.v7.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:layout_marginTop="6dp"
+            app:cardCornerRadius="0dp"
+            app:cardElevation="3dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <android.support.v4.view.ViewPager
+                    android:id="@+id/viewpager_profile"
+                    android:layout_width="match_parent"
+                    android:layout_height="230dp"></android.support.v4.view.ViewPager>
+
+                <me.relex.circleindicator.CircleIndicator
+                    android:id="@+id/indicator"
+                    android:layout_width="match_parent"
+                    android:layout_height="19dp"
+                    app:ci_drawable="@color/colorAccent" />
+
+            </LinearLayout>
+
+        </android.support.v7.widget.CardView>
+
+        <!--3-->
+        <include
+            layout="@layout/table_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="6dp"></include>
+
+    </LinearLayout>
+
+</android.support.v4.widget.NestedScrollView>

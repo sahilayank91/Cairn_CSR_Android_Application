@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="in.ac.iiitkota.cairn.csr.android.ui.NandGharPerDayStats"
+    tools:showIn="@layout/activity_nand_ghar_per_day_stats"
+    android:id="@+id/parent_scrollview">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <android.support.v7.widget.CardView
+            android:id="@+id/calender_holder"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp"
+            android:layout_marginLeft="6dp"
+            android:layout_marginRight="6dp"
+            android:layout_marginTop="5dp"
+            app:cardElevation="3dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingLeft="16dp"
+                android:paddingRight="16dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingBottom="5dp"
+                    android:paddingTop="10dp"
+                    android:text="Choose date"
+                    android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
+                    android:textColor="@color/colorAccent"
+                    android:textStyle="bold" />
+
+                <View
+                    android:layout_width="80dp"
+                    android:layout_height="3dp"
+                    android:background="@color/colorAccent"></View>
+
+                <in.ac.iiitkota.cairn.csr.android.ui.CustomCalendarView
+                    android:id="@+id/calendar_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"></in.ac.iiitkota.cairn.csr.android.ui.CustomCalendarView>
+
+            </LinearLayout>
+
+        </android.support.v7.widget.CardView>
+
+        <!--3-->
+        <Button
+            android:id="@+id/btn_proceed"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp"
+            android:layout_marginTop="5dp"
+            android:backgroundTint="@android:color/white"
+            android:padding="26dp"
+            android:text="Proceed"
+            android:textColor="@color/colorAccent"
+            android:textStyle="bold" />
+
+        <!--4-->
+        <android.support.v7.widget.CardView
+            android:id="@+id/head_count_holder"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp"
+            android:layout_marginLeft="6dp"
+            android:layout_marginRight="6dp"
+            android:layout_marginTop="5dp"
+            android:visibility="gone"
+            app:cardElevation="3dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/selected_date"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingBottom="5dp"
+                    android:paddingLeft="16dp"
+                    android:paddingRight="16dp"
+                    android:paddingTop="10dp"
+                    android:text="12/01/2017"
+                    android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
+                    android:textColor="@color/colorAccent"
+                    android:textStyle="bold" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.01dp"
+                    android:layout_marginBottom="4dp"
+                    android:layout_marginTop="4dp"
+                    android:background="@android:color/darker_gray"></View>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:paddingBottom="5dp"
+                    android:paddingLeft="16dp"
+                    android:paddingRight="16dp"
+                    android:paddingTop="10dp"
+                    android:text="Morning"
+                    android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
+                    android:textColor="@color/colorAccent"
+                    android:textStyle="bold" />
+
+                <View
+                    android:layout_width="50dp"
+                    android:layout_height="3dp"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginRight="16dp"
+                    android:background="@color/colorAccent"></View>
+
+                <TextView
+                    android:id="@+id/morning_headcount_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:paddingLeft="16dp"
+                    android:paddingRight="16dp"
+                    android:text="23"
+                    android:textAppearance="@style/Base.TextAppearance.AppCompat.Display3" />
+
+                <ImageView
+                    android:id="@+id/morning_headcount_image"
+                    android:layout_width="match_parent"
+                    android:layout_height="250dp"
+                    android:layout_marginTop="10dp"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/dummy_headcount" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:paddingBottom="5dp"
+                    android:paddingLeft="16dp"
+                    android:paddingRight="16dp"
+                    android:paddingTop="10dp"
+                    android:text="Evening"
+                    android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
+                    android:textColor="@color/colorAccent"
+                    android:textStyle="bold" />
+
+                <View
+                    android:layout_width="50dp"
+                    android:layout_height="3dp"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginRight="16dp"
+                    android:background="@color/colorAccent"></View>
+
+                <TextView
+                    android:id="@+id/evening_headcount_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:paddingLeft="16dp"
+                    android:paddingRight="16dp"
+                    android:text="19"
+                    android:textAppearance="@style/Base.TextAppearance.AppCompat.Display3" />
+
+                <ImageView
+                    android:id="@+id/evening_headcount_image"
+                    android:layout_width="match_parent"
+                    android:layout_height="250dp"
+                    android:layout_marginTop="10dp"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/dummy_headcount" />
+
+            </LinearLayout>
+
+        </android.support.v7.widget.CardView>
+
+    </LinearLayout>
+
+</android.support.v4.widget.NestedScrollView>
