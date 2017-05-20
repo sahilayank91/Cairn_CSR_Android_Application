@@ -48,7 +48,7 @@
             android:layout_height="wrap_content"
             android:layout_weight="0.9"
             android:focusableInTouchMode="true"
-            android:hint="your message"
+            android:hint="@string/your_message"
             android:padding="12dp" />
 
         <ImageView

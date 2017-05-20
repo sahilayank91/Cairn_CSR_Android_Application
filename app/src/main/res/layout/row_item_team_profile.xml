@@ -53,7 +53,7 @@
                     android:layout_marginLeft="4dp"
                     android:layout_weight="0.5"
                     android:gravity="right|center_vertical"
-                    android:text="admin"
+                    android:text="@string/admin"
                     android:textAppearance="@style/Base.TextAppearance.AppCompat.Body2"
                     android:textColor="@color/colorAccent" />
 

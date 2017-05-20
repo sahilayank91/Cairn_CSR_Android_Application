@@ -60,7 +60,7 @@
                     android:layout_height="wrap_content"
                     android:paddingBottom="5dp"
                     android:paddingTop="10dp"
-                    android:text="Add new milestone"
+                    android:text="@string/milestone_add"
                     android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
                     android:textColor="@color/colorAccent"
                     android:textStyle="bold" />
@@ -121,7 +121,7 @@
                     android:layout_height="wrap_content"
                     android:paddingBottom="5dp"
                     android:paddingTop="10dp"
-                    android:text="Number of Lives Touched"
+                    android:text="@string/num_lives_touched"
                     android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
                     android:textColor="@color/colorAccent"
                     android:textStyle="bold" />
@@ -180,7 +180,7 @@
                     android:layout_height="wrap_content"
                     android:paddingBottom="5dp"
                     android:paddingTop="10dp"
-                    android:text="Add milestone images"
+                    android:text="@string/add_milestone_image"
                     android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
                     android:textColor="@color/colorAccent"
                     android:textStyle="bold" />
@@ -231,7 +231,7 @@
                     android:layout_height="wrap_content"
                     android:paddingBottom="5dp"
                     android:paddingTop="10dp"
-                    android:text="Sharing option"
+                    android:text="@string/share_option"
                     android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
                     android:textColor="@color/colorAccent"
                     android:textStyle="bold" />
@@ -264,7 +264,7 @@
             android:layout_marginTop="10dp"
             android:background="@color/colorAccent"
             android:padding="@dimen/button_padding"
-            android:text="Submit Milestone"
+            android:text="@string/submit_milstone"
             android:textColor="@android:color/white"
             android:textStyle="bold" />
 

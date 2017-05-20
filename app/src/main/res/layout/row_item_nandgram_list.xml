@@ -46,7 +46,7 @@
             android:background="?attr/selectableItemBackgroundBorderless"
             android:paddingLeft="16dp"
             android:paddingRight="16dp"
-            android:text="Add attendance"
+            android:text="@string/add_attendance"
             android:textColor="@color/colorAccent" />
 
     </LinearLayout>

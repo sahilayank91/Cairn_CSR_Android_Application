@@ -36,7 +36,7 @@
                     android:layout_height="wrap_content"
                     android:paddingBottom="5dp"
                     android:paddingTop="10dp"
-                    android:text="Choose date"
+                    android:text="@string/choose_date"
                     android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
                     android:textColor="@color/colorAccent"
                     android:textStyle="bold" />
@@ -65,7 +65,7 @@
             android:layout_marginTop="5dp"
             android:backgroundTint="@android:color/white"
             android:padding="26dp"
-            android:text="Proceed"
+            android:text="@string/proceed"
             android:textColor="@color/colorAccent"
             android:textStyle="bold" />
 

@@ -36,7 +36,7 @@
                     android:layout_height="wrap_content"
                     android:paddingBottom="5dp"
                     android:paddingTop="10dp"
-                    android:text="Capture image"
+                    android:text="@string/capture_image"
                     android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
                     android:textColor="@color/colorAccent"
                     android:textStyle="bold" />
@@ -112,7 +112,7 @@
                     android:layout_height="wrap_content"
                     android:paddingBottom="5dp"
                     android:paddingTop="10dp"
-                    android:text="Location"
+                    android:text="@string/location"
                     android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
                     android:textColor="@color/colorAccent"
                     android:textStyle="bold" />
@@ -166,7 +166,7 @@
                     android:layout_height="wrap_content"
                     android:paddingBottom="5dp"
                     android:paddingTop="10dp"
-                    android:text="Summary"
+                    android:text="@string/summary"
                     android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
                     android:textColor="@color/colorAccent"
                     android:textStyle="bold" />
@@ -202,7 +202,7 @@
             android:layout_marginTop="10dp"
             android:background="@color/colorAccent"
             android:padding="@dimen/button_padding"
-            android:text="Submit attendance"
+            android:text="@string/submit_attendance"
             android:textColor="@android:color/white"
             android:textStyle="bold" />
 

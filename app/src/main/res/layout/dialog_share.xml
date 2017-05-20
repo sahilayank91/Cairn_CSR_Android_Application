@@ -21,7 +21,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:background="?attr/selectableItemBackgroundBorderless"
-            android:text="Cancel"
+            android:text="@string/cancel"
             android:textColor="@color/colorAccent"
             android:id="@+id/cancel"/>
 
@@ -29,7 +29,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:background="?attr/selectableItemBackgroundBorderless"
-            android:text="Share"
+            android:text="@string/share"
             android:textColor="@color/colorAccent"
             android:id="@+id/share"/>
 

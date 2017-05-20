@@ -151,6 +151,7 @@
 
     <string name="nandghar_list">नंदघर की सूची</string>
     <string name="nandghar_per_day_stats">नंदघर प्रति दिन आँकड़े</string>
+    <string name="per_day_stats"> प्रति दिन आँकड़े</string>
     <string name="nandghar_stat">नंदग्राम सांख्यिकी</string>
 
     <string name="reg_success">सफलतापूर्वक पंजीकृत!</string>

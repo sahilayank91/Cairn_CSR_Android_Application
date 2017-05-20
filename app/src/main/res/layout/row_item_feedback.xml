@@ -97,7 +97,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
             android:maxLines="1"
-            android:hint="Provide short feedback ... "
+            android:hint="@string/provide_short_feedback"
             android:padding="16dp" />
 
         <!--4-->
@@ -116,7 +116,7 @@
                 android:layout_height="match_parent"
                 android:layout_weight="0.5"
                 android:background="?attr/selectableItemBackgroundBorderless"
-                android:text="Submit feedback"
+                android:text="@string/submit_feedback"
                 android:textColor="@color/colorAccent" />
 
             <Button
@@ -125,7 +125,7 @@
                 android:layout_height="match_parent"
                 android:layout_weight="0.5"
                 android:background="?attr/selectableItemBackgroundBorderless"
-                android:text="See activities"
+                android:text="@string/see_activity"
                 android:textColor="@android:color/darker_gray" />
 
         </LinearLayout>

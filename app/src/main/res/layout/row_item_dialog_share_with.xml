@@ -8,7 +8,7 @@
     <android.support.v7.widget.AppCompatCheckBox
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Team name"
+        android:text="@string/team_name"
         android:id="@+id/checkbox_team"
         android:textColor="@color/colorAccent"
         android:layout_marginTop="10dp"/>
