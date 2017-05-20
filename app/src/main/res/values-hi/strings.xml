@@ -1,4 +1,4 @@
-<!DOCTYPE resources [<!ENTITY server "139.59.1.193:8080/CairnCSR/rest/"><!ENTITY image_server "139.59.1.193:8080/CairnCSR/images/"><!ENTITY profile_server "139.59.1.193:8080/CairnCSR/profile_pictures/">]>
+﻿<!DOCTYPE resources [<!ENTITY server "139.59.1.193:8080/CairnCSR/rest/"><!ENTITY image_server "139.59.1.193:8080/CairnCSR/images/"><!ENTITY profile_server "139.59.1.193:8080/CairnCSR/profile_pictures/">]>
 
 <resources>
     <string name="app_name">Cairn CSR</string>
@@ -124,11 +124,11 @@
     <string name="post_share_successful">पोस्ट को सफलतापूर्वक साझा किया गया</string>
     <string name="post_share_unsuccessful">माफ़ कीजिये! पोस्ट को साझा नहीं किया जा सका!</string>
 
-    <string name="milestone_add">मील का पत्थर जोड़ें</string>
-    <string name="milestone_edit">मील का पत्थर संपादित करें</string>
+    <string name="milestone_add"> घटना जोड़ें</string>
+    <string name="milestone_edit">घटना संपादित करें</string>
 
-    <string name="milestone_delete_success">मील का पत्थर हटाए गए!</string>
-    <string name="milestone_delete_unsuccess">मील का पत्थर हटाया नहीं जा सका!</string>
+    <string name="milestone_delete_success">घटना हटाई गयी!</string>
+    <string name="milestone_delete_unsuccess">घटना हटाई नहीं जा सकी</string>
 
     <string name="grant_permissions">कृपया आवश्यक अनुमति दें</string>
 
@@ -151,7 +151,7 @@
 
     <string name="nandghar_list">नंदघर की सूची</string>
     <string name="nandghar_per_day_stats">नंदघर प्रति दिन आँकड़े</string>
-
+    <string name="per_day_stats"> प्रति दिन आँकड़े</string>
     <string name="nandghar_stat">नंदग्राम सांख्यिकी</string>
 
     <string name="reg_success">सफलतापूर्वक पंजीकृत!</string>
@@ -170,13 +170,24 @@
     <string name="jan_sanvaad">जन सवांद </string>
     <string name="education">शिक्षा</string>
     <string name="milk">दूध </string>
+    <string name="del_comment">टिप्पणी हटाएं</string>
 
 
 
+
+
+
+
+
+
+
+
+
+    <!-- TODO: New XML elements-->
 
 
     <string name="del_comment">टिप्पणी हटाएं</string>
-    <string name="share">शेयर</string>
+    <string name="share">साझा करे</string>
     <string name="change_password">पासवर्ड बदलें</string>
     <string name="change_lang">भाषा बदलो</string>
     <string name="logout">लोग आउट</string>
@@ -201,14 +212,14 @@
     <string name="verify">सत्यापित करें</string>
     <string name="update">अद्यतन</string>
     <string name="update_profile">प्रोफ़ाइल अद्यतन करें</string>
-    <string name="num_lives_touched">जीवन की संख्या छुआ</string>
-    <string name="add_milestone_image">मील का पत्थर चित्र जोड़ें</string>
+    <string name="num_lives_touched">कितनी बार छुआ गया </string>
+    <string name="add_milestone_image">घटना चित्र जोड़ें</string>
     <string name="share_option">साझा विकल्प</string>
-    <string name="submit_milestone">मील का पत्थर भेजें</string>
+    <string name="submit_milestone">घटना दर्ज करे</string>
     <string name="per_day_stats">प्रति दिन आंकड़े</string>
     <string name="choose_date">तिथि चुनें</string>
     <string name="your_message">आपका सन्देश</string>
-    <string name="capture_image">कब्जा छवि</string>
+    <string name="capture_image">चित्र खींचे  </string>
     <string name="location">स्थान</string>
     <string name="submit_attendance">उपस्थिति जमा करें</string>
     <string name="register">रजिस्टर करें</string>
@@ -216,8 +227,4 @@
     <string name="reset_pass">पासवर्ड फिर से कायम करें</string>
 
 
-    <!-- TODO: New XML elements-->
-    <string name="made"></string>
-    <string name="people_smile"> लोगों को मुस्कान दिया</string>
-    <string name="you_like">आपको यह पोस्ट पसंद आया!</string>
 </resources>
