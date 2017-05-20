@@ -1,4 +1,4 @@
-<!DOCTYPE resources [<!ENTITY server "139.59.1.193:8080/CairnCSR/rest/"><!ENTITY image_server "139.59.1.193:8080/CairnCSR/images/"><!ENTITY profile_server "139.59.1.193:8080/CairnCSR/profile_pictures/">]>
+﻿<!DOCTYPE resources [<!ENTITY server "139.59.1.193:8080/CairnCSR/rest/"><!ENTITY image_server "139.59.1.193:8080/CairnCSR/images/"><!ENTITY profile_server "139.59.1.193:8080/CairnCSR/profile_pictures/">]>
 
 <resources>
     <string name="app_name">Cairn CSR</string>
@@ -170,7 +170,7 @@
     <string name="jan_sanvaad">जन सवांद </string>
     <string name="education">शिक्षा</string>
     <string name="milk">दूध </string>
-    <string name="del_comment"></string>
+    <string name="del_comment">टिप्पणी हटाएं</string>
 
 
 
@@ -186,45 +186,45 @@
     <!-- TODO: New XML elements-->
 
 
-    <string name="del_comment">Delete Comment</string>
-    <string name="share">Share</string>
-    <string name="change_password">Change Password</string>
-    <string name="change_lang">Change Language</string>
-    <string name="logout">Logout</string>
-    <string name="total_smiles">Total Smiles</string>
-    <string name="total_teams">Total teams</string>
-    <string name="total_members">Total members</string>
-    <string name="about_team">About team - </string>
-    <string name="source_name">Source name</string>
-    <string name="admin">admin</string>
-    <string name="like">Like</string>
-    <string name="comment">Comment</string>
-    <string name="submit_feedback">Submit feedback</string>
-    <string name="see_activity">See Activities</string>
-    <string name="provide_short_feedback">Provide short feedback ... </string>
-    <string name="team_name">Team name</string>
-    <string name="suggestion">Suggestion</string>
-    <string name="camera">Camera</string>
-    <string name="gallery">Gallery</string>
-    <string name="department">DEPARTMENT</string>
-    <string name="mem_since">MEMBER SINCE</string>
-    <string name="summary">SUMMARY</string>
-    <string name="verify">Verify</string>
-    <string name="update">UPDATE</string>
-    <string name="update_profile">Update Profile</string>
-    <string name="num_lives_touched">Number of Lives Touched</string>
-    <string name="add_milestone_image">Add milestone images</string>
-    <string name="share_option">Sharing option</string>
-    <string name="submit_milestone">Submit Milestone</string>
-    <string name="per_day_stats">Per Day Stats</string>
-    <string name="choose_date">Choose Date</string>
-    <string name="your_message">Your message</string>
-    <string name="capture_image">Capture Image</string>
-    <string name="location">Location</string>
-    <string name="submit_attendance">Submit Attendance</string>
-    <string name="register">Register</string>
-    <string name="login">Login</string>
-    <string name="reset_pass">RESET PASSWORD</string>
+    <string name="del_comment">टिप्पणी हटाएं</string>
+    <string name="share">शेयर</string>
+    <string name="change_password">पासवर्ड बदलें</string>
+    <string name="change_lang">भाषा बदलो</string>
+    <string name="logout">लोग आउट</string>
+    <string name="total_smiles">कुल मुस्कान</string>
+    <string name="total_teams">कुल समूहों </string>
+    <string name="total_members">कुल सदस्य</string>
+    <string name="about_team">टीम के बारे में -</string>
+    <string name="source_name">स्रोत का नाम</string>
+    <string name="admin">व्यवस्थापक</string>
+    <string name="like">पसंद</string>
+    <string name="comment">टिप्पणी</string>
+    <string name="submit_feedback">प्रतिपुष्टि दें</string>
+    <string name="see_activity">क्रियाएँ देखें</string>
+    <string name="provide_short_feedback">छोटी प्रतिक्रिया प्रदान करें ...</string>
+    <string name="team_name">टीम का नाम</string>
+    <string name="suggestion">सुझाव</string>
+    <string name="camera">कैमरा</string>
+    <string name="gallery">गैलरी</string>
+    <string name="department">विभाग</string>
+    <string name="mem_since">से सदस्ये</string>
+    <string name="summary">सारांश</string>
+    <string name="verify">सत्यापित करें</string>
+    <string name="update">अद्यतन</string>
+    <string name="update_profile">प्रोफ़ाइल अद्यतन करें</string>
+    <string name="num_lives_touched">जीवन की संख्या छुआ</string>
+    <string name="add_milestone_image">मील का पत्थर चित्र जोड़ें</string>
+    <string name="share_option">साझा विकल्प</string>
+    <string name="submit_milestone">मील का पत्थर भेजें</string>
+    <string name="per_day_stats">प्रति दिन आंकड़े</string>
+    <string name="choose_date">तिथि चुनें</string>
+    <string name="your_message">आपका सन्देश</string>
+    <string name="capture_image">कब्जा छवि</string>
+    <string name="location">स्थान</string>
+    <string name="submit_attendance">उपस्थिति जमा करें</string>
+    <string name="register">रजिस्टर करें</string>
+    <string name="login">लॉग इन करें</string>
+    <string name="reset_pass">पासवर्ड फिर से कायम करें</string>
 
 
 </resources>
