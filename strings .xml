@@ -1,0 +1,230 @@
+﻿<!DOCTYPE resources [<!ENTITY server "139.59.1.193:8080/CairnCSR/rest/"><!ENTITY image_server "139.59.1.193:8080/CairnCSR/images/"><!ENTITY profile_server "139.59.1.193:8080/CairnCSR/profile_pictures/">]>
+
+<resources>
+    <string name="app_name">Cairn CSR</string>
+    <string name="login_url">http://&server;AuthenticationService/Login</string>
+    <string name="change_password_url">http://&server;AuthenticationService/updatePassword</string>
+    <string name="register_url">http://&server;AuthenticationService/register</string>
+    <string name="retrieve_profile">http://&server;AuthenticationService/RetrieveUserProfile/</string>
+    <string name="update_profile_picture">http://&server;AuthenticationService/updateProfilePic/</string>
+    <string name="retrieve_user_statistics">http://&server;StatisticsService/getStatistics/</string>
+    <string name="retrieve_news_feed">http://&server;NewsfeedService/RetrieveNewsfeedPosts/</string>
+    <string name="retrieve_author_feed">http://&server;NewsfeedService/RetrieveAuthorPosts/</string>
+    <string name="add_post">http://&server;PostService/addPost/</string>
+    <string name="update_post">http://&server;PostService/updatePost</string>
+    <string name="delete_post">http://&server;PostService/deletePost</string>
+    <string name="retrieve_comments">http://&server;PostService/RetrievePostComments/</string>
+    <string name="add_comment">http://&server;PostService/addComment/</string>
+    <string name="delete_comment">http://&server;PostService/deleteComment/</string>
+    <string name="retrieve_teams">http://&server;TeamService/RetrieveUserTeams/</string>
+    <string name="retrieve_messages">http://&server;TeamService/RetrieveTeamMessages/</string>
+    <string name="send_message">http://&server;TeamService/AddTeamMessage</string>
+    <string name="get_feedback">http://&server;FeedbackService/getFeedback/</string>
+    <string name="update_feedback">http://&server;FeedbackService/updateFeedback/</string>
+    <string name="set_like">http://&server;PostService/AddLike/</string>
+    <string name="share_post">http://&server;PostService/SharePost/</string>
+    <string name="images">http://&image_server;/</string>
+    <string name="profile_images">http://&profile_server;/</string>
+
+    <string name="retrieve_nandgrams">http://&server;NandgramService/getNandgramList/</string>
+    <string name="insert_attendance">http://&server;NandgramService/addAttendance/</string>
+    <string name="get_attendance">http://&server;NandgramService/getAttendance/</string>
+
+
+    <string name="navigation_drawer_open">पथ प्रदर्शन दराज खोलें</string>
+    <string name="navigation_drawer_close">पथ प्रदर्शन दराज को बंद करें</string>
+
+    <string name="action_settings">सेटिंग्स</string>
+    <string name="login_email_hint">मेल</string>
+    <string name="login_password_hint">पासवर्ड</string>
+    <string name="reg_email_hint">ईमेल</string>
+    <string name="reg_name_hint">नाम</string>
+    <string name="reg_department_hint">विभाग</string>
+    <string name="reg_contact_hint">संपर्क करें</string>
+    <string name="reg_password_hint">ासवर्ड</string>
+    <string name="reg_confirm_password_hint">पासवर्ड की पुष्टि कीजिये</string>
+    <string name="otp_hint">OTP दर्ज करें</string>
+    <string name="otp_instructions">(दर्ज किए गए ईमेल को OTP भेजा गया है, अपना इनबॉक्स चेक करें)</string>
+    <string name="action_newsfeed">समाचार फ़ीड</string>
+    <string name="action_my_activity">मेरी गतिविधि</string>
+    <string name="action_messages">संदेश</string>
+    <string name="action_profile">प्रोफाइल</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">नमस्ते रिक्त टुकड़ा</string>
+    <string name="newsfeed_dummy_description">यह डमी विवरण है ...</string>
+    <string name="dummy_summary">एंड्रॉइड प्लेटफॉर्म पर सॉफ्टवेयर डेवलपर के रूप में कार्य करना</string>
+    <string name="title_activity_new_milestone">नई मील का पत्थर गतिविधि</string>
+    <string name="title_activity_message">संदेश गतिविधि</string>
+    <string name="department_hint">नया विभाग</string>
+    <string name="summary_hint">सारांश</string>
+    <string name="title_activity_other_user_profile">अन्य उपयोगकर्ता प्रोफ़ाइल गतिविधि</string>
+    <string name="title_activity_team_profile">टीम प्रोफ़ाइल गतिविधि</string>
+    <string name="action_feedback">प्रतिक्रिया</string>
+    <string name="action_add_milestone">मील का पत्थर जोड़ें</string>
+    <string name="action_edit">संपादित करें</string>
+    <string name="action_delete">मिटाये</string>
+    <string name="action_share_on_media">मीडिया पर साझा करें</string>
+    <string name="reset_password_email_hint">OTP भेजने के लिए ईमेल करे </string>
+    <string name="new_password_hint">नया पासवर्ड </string>
+    <string name="repeat_password_hint">पासवर्ड दोहराएं</string>
+    <string name="current_password_hint">वर्तमान पासवर्ड</string>
+    <string name="title_activity_add_attendence">उपस्थिति जोड़ें</string>
+    <string name="title_activity_nandgram_stats">नंदगढ़ आँकड़े गतिविधि</string>
+    <string name="title_activity_face_detect">चेहरे का पता लगाएं</string>
+    <string name="title_activity_nandgram_list">नंदगढ़ सूची की गतिविधि</string>
+    <string name="dummy_nandgram_address">Hostel Aurobindo, MNIT Jaipur, JLN Road, Malaviya Nagar, Jaipur, Rajasthan</string>
+    <string name="title_activity_nand_ghar_per_day_stats">नंदगढ़ प्रति दिन आँकड़े</string>
+
+
+    <!-- TODO: Removing Hardcoded Strings -->
+    <string name="Edit">संपादित करें</string>
+    <string name="Delete">मिटाये</string>
+    <string name="sure">क्या आपको यकीन है?</string>
+    <string name="cancel">रद्द करे </string>
+    <string name="proceed">आगे बढे </string>
+    <string name="error">माफ़ कीजिये यहाँ कुछ खराबी है</string>
+    <string name="enable_gps">आपकी उपस्थिति स्थान तक पहुंचने के लिए आवश्यक अनुमति प्रदान करे | कृपया जीपीएस सक्षम करें</string>
+    <string name="post_updated">पोस्ट अपडेट किया</string>
+    <string name="touched">छुआ</string>
+    <string name="lives">जिंदगियों </string>
+    <string name="one_comment">1 टिप्पणी</string>
+    <string name="one_like">1 पसंद किया</string>
+    <string name="comments"> टिप्पणियाँ</string>
+
+    <string name="profile_picture_updated">प्रोफ़ाइल चित्र अपडेट किया गया</string>
+    <string name="profile_picture_update_fail">माफ़ कीजिये यहाँ कुछ खराबी है|</string>
+
+    <string name="made_smile">एक व्यक्ति को हंसाया गया </string>
+
+    <string name="fetching_loc_in_process">अभी भी स्थान प्राप्त हो रहा है! कृपया प्रतीक्षा करें!</string>
+
+    <string name="axis_week">सप्ताह </string>
+    <string name="axis_smiles">मुस्कराहटें </string>
+    <string name="axis_year">वर्ष </string>
+    <string name="axis_day">दिन </string>
+
+    <string name="click_picture">कृपया एक तस्वीर पर खींचे !</string>
+    <string name="no_face_detected">कोई चेहरा नहीं मिला, कृपया पुनः प्रयास करें!</string>
+    <string name="one_face_detected">1 चेहरे का पता चला</string>
+    <string name="face_detected"> चेहरें पाए गए </string>
+    <string name="attendance_picture">उपस्थिति चित्र</string>
+    <string name="from_camera">कैमरे से</string>
+
+    <string name="comment_add">टिप्पणी जोड़ें</string>
+    <string name="comment_delete">टिप्पणी हटाई गई!</string>
+    <string name="error_deleting_comment">टिप्पणी हटाने में त्रुटि!</string>
+
+    <string name="share_image">चित्र साझा करें</string>
+    <string name="share_posts">पोस्ट साझा करें</string>
+    <string name="share_with">साझा करेंं।.</string>
+    <string name="select_team_share">कृपया साझा करने के लिए टीमों को चुनें!</string>
+    <string name="share_social">सामाजिक मीडिया पर साझा करें</string>
+    <string name="people_liked">लोग इस पोस्ट को पसंद करते हैं</string>
+    <string name="post_share_successful">पोस्ट को सफलतापूर्वक साझा किया गया</string>
+    <string name="post_share_unsuccessful">माफ़ कीजिये! पोस्ट को साझा नहीं किया जा सका!</string>
+
+    <string name="milestone_add">मील का पत्थर जोड़ें</string>
+    <string name="milestone_edit">मील का पत्थर संपादित करें</string>
+
+    <string name="milestone_delete_success">मील का पत्थर हटाए गए!</string>
+    <string name="milestone_delete_unsuccess">मील का पत्थर हटाया नहीं जा सका!</string>
+
+    <string name="grant_permissions">कृपया आवश्यक अनुमति दें</string>
+
+    <string name="select_picture">चित्र चुनें</string>
+
+    <string name="image_capture_fail">छवि को कैप्चर करने में असमर्थ!</string>
+    <string name="type_desc">कृपया विवरण टाइप करें!</string>
+
+
+    <string name="add_attendance">उपस्थिति जोड़ें</string>
+    <string name="attendance_updated">उपस्थिति अद्यतन</string>
+
+    <string name="otp_verification">OTP का सत्यापन करें ...</string>
+    <string name="fill_all_field">कृपया सभी स्थाान भरे</string>
+    <string name="password_match_fail">पासवर्ड मैच नहीं है!</string>
+    <string name="password_update_success">पासवर्ड सफलतापूर्वक अद्यतन!</string>
+    <string name="incorrect_credential">गलत परिचय</string>
+
+    <string name="offline">आप ऑफलाइन हैं!!</string>
+
+    <string name="nandghar_list">नंदघर की सूची</string>
+    <string name="nandghar_per_day_stats">नंदघर प्रति दिन आँकड़े</string>
+    <string name="per_day_stats"> प्रति दिन आँकड़े</string>
+    <string name="nandghar_stat">नंदग्राम सांख्यिकी</string>
+
+    <string name="reg_success">सफलतापूर्वक पंजीकृत!</string>
+
+    <string name="water_supplied">पानी की आपूर्ति</string>
+    <string name="purifier_setup">शुद्धि संयंत्र स्थापित!</string>
+    <string name="milkplant_setup">दूध संयंत्र स्थापित!</string>
+    <string name="public_toilet_setup">सार्वजनिक शौचालय की स्थापना!</string>
+    <string name="mobile_health_van">मोबाइल स्वाथ्य वैन ड्राइव संचालित</string>
+    <string name="fire_awareness">आग जागरूकता अभियान</string>
+    <string name="skill">कौशल</string>
+    <string name="nat_res_management">प्राकृतिक संसाधन प्रबंधन</string>
+    <string name="jeevan_amrit">जीवन अमृत</string>
+    <string name="nandghar">नंदघर </string>
+    <string name="health">स्वास्थ्य</string>
+    <string name="jan_sanvaad">जन सवांद </string>
+    <string name="education">शिक्षा</string>
+    <string name="milk">दूध </string>
+    <string name="del_comment">टिप्पणी हटाएं</string>
+
+
+
+
+
+
+
+
+
+
+
+
+    <!-- TODO: New XML elements-->
+
+
+    <string name="del_comment">टिप्पणी हटाएं</string>
+    <string name="share">शेयर</string>
+    <string name="change_password">पासवर्ड बदलें</string>
+    <string name="change_lang">भाषा बदलो</string>
+    <string name="logout">लोग आउट</string>
+    <string name="total_smiles">कुल मुस्कान</string>
+    <string name="total_teams">कुल समूहों </string>
+    <string name="total_members">कुल सदस्य</string>
+    <string name="about_team">टीम के बारे में -</string>
+    <string name="source_name">स्रोत का नाम</string>
+    <string name="admin">व्यवस्थापक</string>
+    <string name="like">पसंद</string>
+    <string name="comment">टिप्पणी</string>
+    <string name="submit_feedback">प्रतिपुष्टि दें</string>
+    <string name="see_activity">क्रियाएँ देखें</string>
+    <string name="provide_short_feedback">छोटी प्रतिक्रिया प्रदान करें ...</string>
+    <string name="team_name">टीम का नाम</string>
+    <string name="suggestion">सुझाव</string>
+    <string name="camera">कैमरा</string>
+    <string name="gallery">गैलरी</string>
+    <string name="department">विभाग</string>
+    <string name="mem_since">से सदस्ये</string>
+    <string name="summary">सारांश</string>
+    <string name="verify">सत्यापित करें</string>
+    <string name="update">अद्यतन</string>
+    <string name="update_profile">प्रोफ़ाइल अद्यतन करें</string>
+    <string name="num_lives_touched">जीवन की संख्या छुआ</string>
+    <string name="add_milestone_image">मील का पत्थर चित्र जोड़ें</string>
+    <string name="share_option">साझा विकल्प</string>
+    <string name="submit_milestone">मील का पत्थर भेजें</string>
+    <string name="per_day_stats">प्रति दिन आंकड़े</string>
+    <string name="choose_date">तिथि चुनें</string>
+    <string name="your_message">आपका सन्देश</string>
+    <string name="capture_image">कब्जा छवि</string>
+    <string name="location">स्थान</string>
+    <string name="submit_attendance">उपस्थिति जमा करें</string>
+    <string name="register">रजिस्टर करें</string>
+    <string name="login">लॉग इन करें</string>
+    <string name="reset_pass">पासवर्ड फिर से कायम करें</string>
+
+
+</resources>
