@@ -57,11 +57,11 @@ public class ChangePasswordActivity extends AppCompatActivity {
             super.onPreExecute();
             if (current_password.getText().toString().equals("") || new_password.getText().toString().equals("")|| repeat_password.getText().toString().equals("")) {
                 cancel(true);
-                Toast.makeText(getApplicationContext(), "Please fill all fields", Toast.LENGTH_LONG).show();
+                Toast.makeText(getApplicationContext(), R.string.fill_all_field, Toast.LENGTH_LONG).show();
             }
             if ( !new_password.getText().toString().equals(repeat_password.getText().toString())) {
                 cancel(true);
-                Toast.makeText(getApplicationContext(), "Passwords dont match!", Toast.LENGTH_LONG).show();
+                Toast.makeText(getApplicationContext(), R.string.password_match_fail, Toast.LENGTH_LONG).show();
             }
             params.put("user_email", UserData.getInstance(getApplicationContext()).getEmail());
             params.put("old_password", current_password.getText().toString());
@@ -74,17 +74,17 @@ public class ChangePasswordActivity extends AppCompatActivity {
             super.onPostExecute(s);
             if(connection){
                 if (success) {
-                    Toast.makeText(getApplicationContext(), "Password Updated Successfully!", Toast.LENGTH_LONG).show();
+                    Toast.makeText(getApplicationContext(), R.string.password_update_success, Toast.LENGTH_LONG).show();
                     finish();
                 } else {
-                    Toast.makeText(getApplicationContext(), "Incorrect Credentials", Toast.LENGTH_LONG).show();
+                    Toast.makeText(getApplicationContext(), R.string.incorrect_credential, Toast.LENGTH_LONG).show();
                     current_password.setText("");
                     new_password.setText("");
                     repeat_password.setText("");
                 }
             }
             else{
-                Toast.makeText(getApplicationContext(), "You are offline!", Toast.LENGTH_LONG).show();
+                Toast.makeText(getApplicationContext(),R.string.offline, Toast.LENGTH_LONG).show();
             }
 
         }

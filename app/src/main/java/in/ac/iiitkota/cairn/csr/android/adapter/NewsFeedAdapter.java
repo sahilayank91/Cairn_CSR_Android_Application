@@ -129,18 +129,18 @@ public class NewsFeedAdapter extends RecyclerView.Adapter<NewsFeedAdapter.NewsFe
         if (current.getSmiles() > 1)
             holder.title.setText("made " + current.getSmiles() + " people smile");
         else if (current.getSmiles() == 1)
-            holder.title.setText("made a person smile");
+            holder.title.setText(R.string.made_smile);
         else
-            holder.title.setText("updated a post");
+            holder.title.setText(R.string.post_updated);
 
 
         if (current.getComments_count() == 1)
-            holder.total_comments.setText("1 comment");
+            holder.total_comments.setText(R.string.one_comment);
         else if (current.getComments_count() > 1) {
             holder.total_comments.setText(current.getComments_count() + " comments");
         } else holder.total_comments.setText("");
         if (current.getLikes_count() == 1)
-            holder.total_likes.setText("1 like");
+            holder.total_likes.setText(R.string.one_like);
         else if (current.getLikes_count() > 1) {
             holder.total_likes.setText(current.getLikes_count() + " likes");
         } else holder.total_likes.setText("");

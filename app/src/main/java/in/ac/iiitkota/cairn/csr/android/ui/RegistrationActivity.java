@@ -67,9 +67,9 @@ public class RegistrationActivity extends AppCompatActivity {
                 password = reg_password.getText().toString();
                 repeat_password = reg_repeat_password.getText().toString();
                 if (name.length() == 0 || department.length() == 0 || contact.length() == 0 || password.length() == 0 || repeat_password.length() == 0) {
-                    Toast.makeText(getApplicationContext(), "Please fill all fields!", Toast.LENGTH_LONG).show();
+                    Toast.makeText(getApplicationContext(),R.string.fill_all_field, Toast.LENGTH_LONG).show();
                 } else if (!password.equals(repeat_password)) {
-                    Toast.makeText(getApplicationContext(), "Passwords do not match!", Toast.LENGTH_LONG).show();
+                    Toast.makeText(getApplicationContext(), R.string.password_match_fail, Toast.LENGTH_LONG).show();
                 } else {
                     new RegisterUser().execute();
                 }
@@ -95,13 +95,13 @@ public class RegistrationActivity extends AppCompatActivity {
         protected void onPostExecute(String s) {
             super.onPostExecute(s);
             if (success) {
-                Toast.makeText(getApplicationContext(), "Registered Successfully!", Toast.LENGTH_LONG).show();
+                Toast.makeText(getApplicationContext(), R.string.reg_success, Toast.LENGTH_LONG).show();
                 Intent intent = new Intent(RegistrationActivity.this, MainActivity.class);
                 intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
                 startActivity(intent);
                 finish();
             } else {
-                Toast.makeText(getApplicationContext(), "Sorry there was an error!", Toast.LENGTH_LONG).show();
+                Toast.makeText(getApplicationContext(), R.string.error, Toast.LENGTH_LONG).show();
             }
         }
 

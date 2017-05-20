@@ -199,7 +199,7 @@ public class ProfileFragment extends Fragment {
     }
     public void selectImageFromGallery() {
         if(!isStoragePermissionGranted()){
-            Toast.makeText(getContext(),"Please grant the required permissions",Toast.LENGTH_LONG).show();
+            Toast.makeText(getContext(),R.string.grant_permissions,Toast.LENGTH_LONG).show();
             return;
         }
         else {
@@ -212,7 +212,7 @@ public class ProfileFragment extends Fragment {
 
 
 
-            startActivityForResult(Intent.createChooser(intent, "Select Picture"), PICK_IMAGE);
+            startActivityForResult(Intent.createChooser(intent, getResources().getString(R.string.select_picture)), PICK_IMAGE);
         }
     }
     @Override
@@ -247,7 +247,7 @@ public class ProfileFragment extends Fragment {
             }
             catch (Exception e1){
                 e1.printStackTrace();
-                Toast.makeText(getContext(), "Unable to capture image!", Toast.LENGTH_SHORT).show();
+                Toast.makeText(getContext(), R.string.image_capture_fail, Toast.LENGTH_SHORT).show();
             }
 
         new UpdateProfilePic().execute();
@@ -301,12 +301,12 @@ public class ProfileFragment extends Fragment {
         protected void onPostExecute(String s) {
             super.onPostExecute(s);
             if(success){
-                Toast.makeText(getContext(),"Profile Picture updated",Toast.LENGTH_LONG).show();;
+                Toast.makeText(getContext(),R.string.profile_picture_updated,Toast.LENGTH_LONG).show();;
 
             }
             else
             {
-                Toast.makeText(getContext(),"Sorry there was an error!",Toast.LENGTH_LONG).show();;
+                Toast.makeText(getContext(),R.string.profile_picture_update_fail,Toast.LENGTH_LONG).show();;
             }
         }
 

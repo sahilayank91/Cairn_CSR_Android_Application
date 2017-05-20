@@ -1,24 +1,36 @@
 package in.ac.iiitkota.cairn.csr.android.ui;
 
+import android.content.Context;
+import android.content.DialogInterface;
 import android.content.Intent;
+import android.content.SharedPreferences;
+import android.content.res.Configuration;
 import android.os.Bundle;
+import android.preference.PreferenceManager;
 import android.support.annotation.NonNull;
 import android.support.design.widget.BottomNavigationView;
 import android.support.design.widget.NavigationView;
+import android.support.design.widget.Snackbar;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
+import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.TextView;
 
+import java.util.Arrays;
+import java.util.Locale;
+
 import in.ac.iiitkota.cairn.csr.android.R;
 import in.ac.iiitkota.cairn.csr.android.SharedPreferenceSingleton;
+
 import in.ac.iiitkota.cairn.csr.android.model.UserData;
 import in.ac.iiitkota.cairn.csr.android.ui.fragments.FeedbackFragment;
 import in.ac.iiitkota.cairn.csr.android.ui.fragments.MessagesThreadFragment;
@@ -36,6 +48,10 @@ public class MainActivity extends AppCompatActivity
     private MessagesThreadFragment messagesThreadFragment;
     private ProfileFragment profileFragment;
     private FeedbackFragment feedbackFragment;
+    private SharedPreferences sharedPreferences;
+    public static final String MyPREFERENCES = "MyPrefs" ;
+    private String selectedLanguage;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -43,7 +59,7 @@ public class MainActivity extends AppCompatActivity
         setContentView(R.layout.activity_main);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
-        getSupportActionBar().setTitle("Cairn CSR");
+        getSupportActionBar().setTitle(R.string.app_name);
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
@@ -61,8 +77,22 @@ public class MainActivity extends AppCompatActivity
         setUpBottomBar();
         fragmentManager = getSupportFragmentManager();
 
+        //Getting configuration file for the application
+        Configuration config = getBaseContext().getResources().getConfiguration();
+
+
+        Log.w("shared pref lang",PreferenceManager.getDefaultSharedPreferences(getApplicationContext()).getString("LANG",""));
+        String lang = PreferenceManager.getDefaultSharedPreferences(getApplicationContext()).getString("LANG","");
+        if (! "".equals(lang) && ! config.locale.getLanguage().equals(lang)) {
+            setLangRecreate(lang);
+        }
+
+        if(PreferenceManager.getDefaultSharedPreferences(getApplicationContext()).getString("LANG","")==null){
+            updateLanguage();
+        }
         if (newsFeedFragment == null) newsFeedFragment = new NewsFeedFragment();
         replaceFragment(newsFeedFragment);
+
     }
 
     private void setUpBottomBar() {
@@ -168,12 +198,87 @@ public class MainActivity extends AppCompatActivity
             startActivity(new Intent(MainActivity.this, ChangePasswordActivity.class));
         } else if (id == R.id.nav_nandgram_list) {
             startActivity(new Intent(MainActivity.this, NandGharListActivity.class));
+        }else if(id==R.id.nav_change_lang){
+            //ChangeLanguage Activity Here
+            updateLanguage();
+
         }
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);
         return true;
     }
+
+    private void updateLanguage(){
+        final AlertDialog.Builder builder = new AlertDialog.Builder(MainActivity.this);
+
+        // Set the alert dialog title
+        builder.setTitle("Choose your Language");
+        // Initializing an array of Languages
+        final String[] language = new String[]{
+                "English",
+                "हिन्दी"
+        };
+
+        builder.setSingleChoiceItems(
+                language, // Items list
+                -1, // Index of checked item (-1 = no selection)
+                new DialogInterface.OnClickListener() // Item click listener
+                {
+                    @Override
+                    public void onClick(DialogInterface dialogInterface, int i) {
+                        // Get the alert dialog selected item's text
+                        String selectedItem = Arrays.asList(language).get(i);
+                        // Display the selected item's text on snack bar
+
+                        if(selectedItem=="English"){
+                            selectedLanguage="en";
+                        }else if(selectedItem=="हिन्दी"){
+                            selectedLanguage="hi";
+                        }
+
+                        if(selectedLanguage.equalsIgnoreCase("en")){
+
+                            PreferenceManager.getDefaultSharedPreferences(getApplicationContext()).edit().putString("LANG", "en").commit();
+
+                        }else if(selectedLanguage.equalsIgnoreCase("hi")){
+
+                            PreferenceManager.getDefaultSharedPreferences(getApplicationContext()).edit().putString("LANG", "hi").commit();
+
+                        }
+                    }
+                });
+
+        builder.setPositiveButton("Update", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialogInterface, int i) {
+                // Just dismiss the alert dialog after selection
+                // Or do something now
+                setLangRecreate(selectedLanguage);
+            }
+        });
+
+
+        // Create the alert dialog
+        AlertDialog dialog = builder.create();
+
+        // Finally, display the alert dialog
+        dialog.show();
+
+
+
+    }
+
+
+    public void setLangRecreate(String langval) {
+        Configuration config = getBaseContext().getResources().getConfiguration();
+        Locale locale = new Locale(langval);
+        Locale.setDefault(locale);
+        config.locale = locale;
+        getBaseContext().getResources().updateConfiguration(config, getBaseContext().getResources().getDisplayMetrics());
+        recreate();
+    }
+
 
     private void addFragment(Fragment fragment, String tag) {
         FragmentTransaction transaction = fragmentManager.beginTransaction();

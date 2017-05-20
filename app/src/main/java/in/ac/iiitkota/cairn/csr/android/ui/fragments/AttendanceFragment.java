@@ -154,8 +154,8 @@ public  class AttendanceFragment extends Fragment {
             Axis axisX = new Axis(axisValues);
             Axis axisY = new Axis().setHasLines(true);
             if (hasAxesNames) {
-                axisX.setName("Week");
-                axisY.setName("Smiles");
+                axisX.setName(getResources().getString(R.string.axis_week));
+                axisY.setName(getResources().getString(R.string.axis_smiles));
             }
             data.setAxisXBottom(axisX);
             data.setAxisYLeft(axisY);
@@ -188,8 +188,8 @@ public  class AttendanceFragment extends Fragment {
             Axis axisX = new Axis(axisValues);
             Axis axisY = new Axis().setHasLines(true);
             if (hasAxesNames) {
-                axisX.setName("Year");
-                axisY.setName("Smiles");
+                axisX.setName(getResources().getString(R.string.axis_year));
+                axisY.setName(getResources().getString(R.string.axis_smiles));
             }
             data.setAxisXBottom(axisX);
             data.setAxisYLeft(axisY);

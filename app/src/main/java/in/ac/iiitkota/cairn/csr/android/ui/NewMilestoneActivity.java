@@ -171,7 +171,7 @@ public class NewMilestoneActivity extends AppCompatActivity implements CheckboxC
 
                 HashMap<String, String> form_params = new HashMap<>();
                 if (milestoneAutoCompleteTextView.getText().toString().trim().equals("")) {
-                    Toast.makeText(getApplicationContext(), "Please type a description!", Toast.LENGTH_LONG).show();
+                    Toast.makeText(getApplicationContext(), R.string.type_desc, Toast.LENGTH_LONG).show();
 
                     return;
                 }
@@ -209,7 +209,7 @@ public class NewMilestoneActivity extends AppCompatActivity implements CheckboxC
                             }
                         }
                         if(share_teams.size()==0){
-                            Toast.makeText(getApplicationContext(), "Please select teams to share with!", Toast.LENGTH_LONG).show();
+                            Toast.makeText(getApplicationContext(), R.string.select_team_share, Toast.LENGTH_LONG).show();
                         return;
                         }
                         for (int i = 0; i < share_teams.size(); i++) {
@@ -228,9 +228,9 @@ public class NewMilestoneActivity extends AppCompatActivity implements CheckboxC
                 }
             }
         });
-        if (!edit) getSupportActionBar().setTitle("Add Milestone");
+        if (!edit) getSupportActionBar().setTitle(R.string.milestone_add);
         else {
-            getSupportActionBar().setTitle("Edit Milestone");
+            getSupportActionBar().setTitle(R.string.milestone_edit);
             findViewById(R.id.sharing_card).setVisibility(View.GONE);
             milestoneAutoCompleteTextView.setText(getIntent().getStringExtra("edit_title"));
             edit_post_lives = getIntent().getLongExtra("edit_lives", 0L);
@@ -304,7 +304,7 @@ public class NewMilestoneActivity extends AppCompatActivity implements CheckboxC
 
     public void selectImageFromGallery() {
         if (!isStoragePermissionGranted()) {
-            Toast.makeText(getApplicationContext(), "Please grant the required permissions", Toast.LENGTH_LONG).show();
+            Toast.makeText(getApplicationContext(), R.string.grant_permissions, Toast.LENGTH_LONG).show();
             return;
         } else {
 
@@ -312,13 +312,13 @@ public class NewMilestoneActivity extends AppCompatActivity implements CheckboxC
             Intent intent = new Intent();
             intent.setType("image/*");
             intent.setAction(Intent.ACTION_GET_CONTENT);
-            startActivityForResult(Intent.createChooser(intent, "Select Picture"), PICK_IMAGE);
+            startActivityForResult(Intent.createChooser(intent, getResources().getString(R.string.select_picture)), PICK_IMAGE);
         }
     }
 
     private void startCameraActivity() {
         if (!isStoragePermissionGranted()) {
-            Toast.makeText(getApplicationContext(), "Please grant the required permissions", Toast.LENGTH_LONG).show();
+            Toast.makeText(getApplicationContext(),R.string.grant_permissions, Toast.LENGTH_LONG).show();
             return;
         }
 
@@ -378,7 +378,7 @@ public class NewMilestoneActivity extends AppCompatActivity implements CheckboxC
               }
               catch (Exception e1){
                   e1.printStackTrace();
-                  Toast.makeText(this, "Unable to capture image!", Toast.LENGTH_SHORT).show();
+                  Toast.makeText(this, R.string.image_capture_fail, Toast.LENGTH_SHORT).show();
               }
 //            }
             image_selected = true;
@@ -413,7 +413,7 @@ public class NewMilestoneActivity extends AppCompatActivity implements CheckboxC
                 isImageCaptured = true;
             } catch (Exception e) {
                 e.printStackTrace();
-                Toast.makeText(this, "Unable to capture image!", Toast.LENGTH_SHORT).show();
+                Toast.makeText(this, R.string.image_capture_fail, Toast.LENGTH_SHORT).show();
             }
         }
     }
@@ -449,20 +449,20 @@ public class NewMilestoneActivity extends AppCompatActivity implements CheckboxC
 
     private String[] prepareSuggestions() {
         return new String[]{
-                "Water Supplied",
-                "Purifier set up!",
-                "Milk Plant set up!",
-                "Public toilet set up",
-                "Mobile Health Van Drive conducted",
-                "Fire awareness campaign",
-                "Skill",
-                "Natural Resource Management",
-                "Jeevan Amrit",
-                "Nandghar",
-                "Health",
-                "Jan Sanvaad",
-                "Education",
-                "Milk"
+                getResources().getString(R.string.water_supplied),
+                getResources().getString(R.string.purifier_setup),
+                getResources().getString(R.string.milkplant_setup),
+                getResources().getString(R.string.public_toilet_setup),
+                getResources().getString(R.string.mobile_health_van),
+                getResources().getString(R.string.fire_awareness),
+                getResources().getString(R.string.skill),
+                getResources().getString(R.string.nat_res_management),
+                getResources().getString(R.string.jeevan_amrit),
+                getResources().getString(R.string.nandghar),
+                getResources().getString(R.string.health),
+                getResources().getString(R.string.jan_sanvaad),
+                getResources().getString(R.string.education),
+                getResources().getString(R.string.milk)
 
         };
     }

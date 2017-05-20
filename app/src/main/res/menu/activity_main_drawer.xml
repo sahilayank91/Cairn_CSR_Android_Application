@@ -17,6 +17,11 @@
         android:title="NandGhar" />
 
     <item
+        android:id="@+id/nav_change_lang"
+        android:icon="@drawable/ic_audiotrack_light"
+        android:title="Change Language"/>
+
+    <item
         android:id="@+id/nav_logout"
         android:icon="@drawable/ic_clear_black_24dp"
         android:title="Logout" />

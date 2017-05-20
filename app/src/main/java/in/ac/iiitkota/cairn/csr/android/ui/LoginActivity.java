@@ -70,7 +70,7 @@ public class LoginActivity extends AppCompatActivity {
             super.onPreExecute();
             if (login_email.getText().toString().equals("") || login_password.getText().toString().equals("")) {
                 cancel(true);
-                Toast.makeText(getApplicationContext(), "Please fill both fields", Toast.LENGTH_LONG).show();
+                Toast.makeText(getApplicationContext(), R.string.fill_all_field, Toast.LENGTH_LONG).show();
             }
             params.put("user_email", login_email.getText().toString());
             params.put("user_password", login_password.getText().toString());
@@ -86,12 +86,12 @@ public class LoginActivity extends AppCompatActivity {
                     startActivity(intent);
                     finish();
                 } else {
-                    Toast.makeText(getApplicationContext(), "Incorrect Credentials", Toast.LENGTH_LONG).show();
+                    Toast.makeText(getApplicationContext(),R.string.incorrect_credential, Toast.LENGTH_LONG).show();
                     login_password.setText("");
                 }
             }
             else{
-                Toast.makeText(getApplicationContext(), "You are offline!", Toast.LENGTH_LONG).show();
+                Toast.makeText(getApplicationContext(), R.string.offline, Toast.LENGTH_LONG).show();
             }
 
         }

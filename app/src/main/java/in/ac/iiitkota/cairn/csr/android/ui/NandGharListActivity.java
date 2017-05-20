@@ -37,7 +37,7 @@ public class NandGharListActivity extends AppCompatActivity implements RCVItemCl
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
-        getSupportActionBar().setTitle("NandGhar list");
+        getSupportActionBar().setTitle(R.string.nandghar_list);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
         recyclerView = (RecyclerView) findViewById(R.id.recycler_view_nandgram_list);

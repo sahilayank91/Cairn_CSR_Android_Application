@@ -277,11 +277,11 @@ public class NewsFeedFragment extends Fragment implements RCVItemClickListener, 
         PopupMenu popupMenu = new PopupMenu(getActivity(), clickedView);
 
         if(post.getAuthor().getUser_id()==UserData.getInstance(getContext()).getUser().getUser_id()){
-            popupMenu.getMenu().add(Menu.NONE, 1,1, "Edit");
-            popupMenu.getMenu().add(Menu.NONE, 2,2,"Delete");
+            popupMenu.getMenu().add(Menu.NONE, 1,1, R.string.Edit);
+            popupMenu.getMenu().add(Menu.NONE, 2,2,R.string.Delete);
         }
 
-        popupMenu.getMenu().add(Menu.NONE, 3,3,"Share on Social Media");
+        popupMenu.getMenu().add(Menu.NONE, 3,3,R.string.share_social);
 
         popupMenu.show();
 
@@ -312,7 +312,7 @@ public class NewsFeedFragment extends Fragment implements RCVItemClickListener, 
                         if (post.getSmiles() > 1)
                             text="made " + post.getSmiles() + " people smile";
                         else if (post.getSmiles() == 1)
-                            text="made a person smile";
+                            text=getResources().getString(R.string.made_smile);
                         else
                             text="";
                         Drawable drawable=null;
@@ -342,7 +342,7 @@ public class NewsFeedFragment extends Fragment implements RCVItemClickListener, 
         Dialog dialog = new Dialog(getActivity());
         //dialog.requestWindowFeature(Window.FEATURE_NO_TITLE);
         dialog.setContentView(R.layout.dialog_likes);
-        dialog.setTitle("People liked this post");
+        dialog.setTitle(R.string.people_liked);
 
         RecyclerView recyclerView = (RecyclerView) dialog.findViewById(R.id.recycler_view_likes_dialog);
         recyclerView.setLayoutManager(new LinearLayoutManager(getActivity()));
@@ -456,8 +456,8 @@ public class NewsFeedFragment extends Fragment implements RCVItemClickListener, 
         @Override
         protected void onPostExecute(String response) {
             super.onPostExecute(response);
-            if(success)Toast.makeText(getContext(),"Post Shared Successfully",Toast.LENGTH_LONG).show();
-            else Toast.makeText(getContext(),"Sorry! The post could not be shared!",Toast.LENGTH_LONG).show();
+            if(success)Toast.makeText(getContext(),R.string.post_share_successful,Toast.LENGTH_LONG).show();
+            else Toast.makeText(getContext(),R.string.post_share_unsuccessful,Toast.LENGTH_LONG).show();
 
 
         }
@@ -501,13 +501,13 @@ public class NewsFeedFragment extends Fragment implements RCVItemClickListener, 
         protected void onPostExecute(String s) {
             super.onPostExecute(s);
             if (success) {
-                Toast.makeText(getContext(), "Milestone Deleted!", Toast.LENGTH_LONG).show();
+                Toast.makeText(getContext(), R.string.milestone_delete_success, Toast.LENGTH_LONG).show();
                 listNewsFeed.remove(position);
                 adapter.notifyItemRemoved(position);
 
 
             } else {
-                Toast.makeText(getContext(), "Milestone Could not be Deleted!", Toast.LENGTH_LONG).show();
+                Toast.makeText(getContext(), R.string.milestone_delete_unsuccess, Toast.LENGTH_LONG).show();
             }
             progressBar.setVisibility(View.GONE);
         }
@@ -608,7 +608,7 @@ public class NewsFeedFragment extends Fragment implements RCVItemClickListener, 
             share.putExtra(Intent.EXTRA_TEXT, text);
 
 
-            startActivity(Intent.createChooser(share, "Share Image"));
+            startActivity(Intent.createChooser(share, getResources().getString(R.string.share_image)));
         }
 
         else{
@@ -617,7 +617,7 @@ public class NewsFeedFragment extends Fragment implements RCVItemClickListener, 
             share.putExtra(Intent.EXTRA_TEXT, text);
 
 
-            startActivity(Intent.createChooser(share, "Share Post"));
+            startActivity(Intent.createChooser(share, getResources().getString(R.string.share_posts)));
 
         }
 

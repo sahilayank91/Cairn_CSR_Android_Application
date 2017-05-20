@@ -120,6 +120,12 @@ public class NandGharPerDayStats extends AppCompatActivity {
 
     }
 
+
+    public void setHeadCountHolder(){
+
+
+    }
+
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         getMenuInflater().inflate(R.menu.common, menu);
@@ -148,7 +154,7 @@ public class NandGharPerDayStats extends AppCompatActivity {
             calendarHolder.setVisibility(View.VISIBLE);
             calendarHolder.setVisibility(View.VISIBLE);
             headcountHolder.setVisibility(View.GONE);
-            btnProceed.setText("Proceed");
+            btnProceed.setText(R.string.proceed);
         }
 
         //super.onBackPressed();

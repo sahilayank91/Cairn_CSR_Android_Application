@@ -44,6 +44,10 @@
             </intent-filter>
         </activity>
         <activity
+            android:name=".ChangeLanguage.ChangeLanguageActivity"
+            android:label="Change Language"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
             android:name=".ui.RegistrationActivity"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme.NoActionBar" />

@@ -230,7 +230,7 @@ public class CommentDetailsActivity extends AppCompatActivity implements RCVItem
                         if (post.getSmiles() > 1)
                             text="made " + post.getSmiles() + " people smile";
                         else if (post.getSmiles() == 1)
-                            text="made a person smile";
+                            text=getResources().getString(R.string.made_smile);
                         else
                             text="";
                         Drawable drawable=null;
@@ -283,10 +283,10 @@ public class CommentDetailsActivity extends AppCompatActivity implements RCVItem
     private void showAlertDialog(final int position) {
 
         AlertDialog.Builder builder = new AlertDialog.Builder(this);
-        builder.setTitle("Delete");
-        builder.setMessage("Are you sure?");
+        builder.setTitle(R.string.Delete);
+        builder.setMessage(R.string.sure);
 
-        builder.setPositiveButton("Delete", new DialogInterface.OnClickListener() {
+        builder.setPositiveButton(R.string.Delete, new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialog, int which) {
 
@@ -296,7 +296,7 @@ public class CommentDetailsActivity extends AppCompatActivity implements RCVItem
             }
         });
 
-        builder.setNegativeButton("Cancel", null);
+        builder.setNegativeButton(R.string.cancel, null);
         builder.show();
     }
 
@@ -317,7 +317,7 @@ public class CommentDetailsActivity extends AppCompatActivity implements RCVItem
         protected void onPostExecute(String s) {
             super.onPostExecute(s);
             etComment.setText("");
-            Toast.makeText(getApplicationContext(), "Comment added!", Toast.LENGTH_SHORT).show();
+            Toast.makeText(getApplicationContext(), R.string.comment_add, Toast.LENGTH_SHORT).show();
             new GetComments().execute();
             iconPublishComment.setVisibility(View.VISIBLE);
             progressBar.setVisibility(View.GONE);
@@ -373,12 +373,12 @@ public class CommentDetailsActivity extends AppCompatActivity implements RCVItem
                 if(success){
                     listComments.remove(position);
                     adapter.notifyItemRemoved(position+1);
-                    Toast.makeText(getApplicationContext(), "Comment deleted!", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(getApplicationContext(), R.string.comment_delete, Toast.LENGTH_SHORT).show();
 
                 }
-                else Toast.makeText(getApplicationContext(), "Error deleting comment!", Toast.LENGTH_SHORT).show();
+                else Toast.makeText(getApplicationContext(), R.string.error_deleting_comment, Toast.LENGTH_SHORT).show();
             }
-            else Toast.makeText(getApplicationContext(), "You are offline!", Toast.LENGTH_SHORT).show();
+            else Toast.makeText(getApplicationContext(), R.string.offline, Toast.LENGTH_SHORT).show();
 
 
             iconPublishComment.setVisibility(View.VISIBLE);
@@ -482,8 +482,8 @@ public class CommentDetailsActivity extends AppCompatActivity implements RCVItem
         @Override
         protected void onPostExecute(String response) {
             super.onPostExecute(response);
-            if(success)Toast.makeText(getApplicationContext(),"Post Shared Successfully",Toast.LENGTH_LONG).show();
-            else Toast.makeText(getApplicationContext(),"Sorry! The post could not be shared!",Toast.LENGTH_LONG).show();
+            if(success)Toast.makeText(getApplicationContext(),R.string.post_share_successful,Toast.LENGTH_LONG).show();
+            else Toast.makeText(getApplicationContext(),R.string.post_share_unsuccessful,Toast.LENGTH_LONG).show();
 
 
         }
@@ -574,12 +574,12 @@ public class CommentDetailsActivity extends AppCompatActivity implements RCVItem
         protected void onPostExecute(String s) {
             super.onPostExecute(s);
             if (success) {
-                Toast.makeText(getApplicationContext(), "Milestone Deleted!", Toast.LENGTH_LONG).show();
+                Toast.makeText(getApplicationContext(),R.string.milestone_delete_success, Toast.LENGTH_LONG).show();
                finish();
 
 
             } else {
-                Toast.makeText(getApplicationContext(), "Milestone Could not be Deleted!", Toast.LENGTH_LONG).show();
+                Toast.makeText(getApplicationContext(), R.string.milestone_delete_unsuccess, Toast.LENGTH_LONG).show();
             }
             progressBar.setVisibility(View.GONE);
         }
@@ -622,7 +622,7 @@ public class CommentDetailsActivity extends AppCompatActivity implements RCVItem
             share.putExtra(Intent.EXTRA_TEXT, text);
 
 
-            startActivity(Intent.createChooser(share, "Share Image"));
+            startActivity(Intent.createChooser(share, getResources().getString(R.string.share_image)));
         }
 
         else{
@@ -631,7 +631,7 @@ public class CommentDetailsActivity extends AppCompatActivity implements RCVItem
             share.putExtra(Intent.EXTRA_TEXT, text);
 
 
-            startActivity(Intent.createChooser(share, "Share Post"));
+            startActivity(Intent.createChooser(share, getResources().getString(R.string.share_post)));
 
         }
 

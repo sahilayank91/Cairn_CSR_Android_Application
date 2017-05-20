@@ -120,8 +120,8 @@ public  class SmilesFragment extends Fragment {
             Axis axisX = new Axis(axisValues);
             Axis axisY = new Axis().setHasLines(true);
             if (hasAxesNames) {
-                axisX.setName("Day");
-                axisY.setName("Smiles");
+                axisX.setName(getResources().getString(R.string.axis_day));
+                axisY.setName(getResources().getString(R.string.axis_smiles));
             }
             data.setAxisXBottom(axisX);
             data.setAxisYLeft(axisY);
@@ -148,14 +148,14 @@ public  class SmilesFragment extends Fragment {
             for (int i = 0; i < numColumns; i++) {
                 calendar.setTime(new Date(dates.get(i)));
                 AxisValue axisValue = new AxisValue(i);
-                axisValue.setLabel("Week "+(i+1));
+                axisValue.setLabel(getResources().getString(R.string.axis_week)+" "+(i+1));
                 axisValues.add(axisValue);
             }
             Axis axisX = new Axis(axisValues);
             Axis axisY = new Axis().setHasLines(true);
             if (hasAxesNames) {
-                axisX.setName("Week");
-                axisY.setName("Smiles");
+                axisX.setName(getResources().getString(R.string.axis_week));
+                axisY.setName(getResources().getString(R.string.axis_smiles));
             }
             data.setAxisXBottom(axisX);
             data.setAxisYLeft(axisY);
@@ -188,8 +188,8 @@ public  class SmilesFragment extends Fragment {
             Axis axisX = new Axis(axisValues);
             Axis axisY = new Axis().setHasLines(true);
             if (hasAxesNames) {
-                axisX.setName("Year");
-                axisY.setName("Smiles");
+                axisX.setName(getResources().getString(R.string.axis_year));
+                axisY.setName(getResources().getString(R.string.axis_smiles));
             }
             data.setAxisXBottom(axisX);
             data.setAxisYLeft(axisY);

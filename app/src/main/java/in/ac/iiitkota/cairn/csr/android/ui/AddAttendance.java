@@ -89,7 +89,7 @@ public class AddAttendance extends AppCompatActivity implements LocationListener
         progressBar.setVisibility(View.GONE);
         locationProgressBar.setVisibility(View.VISIBLE);
         setSupportActionBar(toolbar);
-        getSupportActionBar().setTitle("Add attendance");
+        getSupportActionBar().setTitle(R.string.add_attendance);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         nandgram_id=getIntent().getLongExtra("nandgram_id",-1);
         captureImage = (ImageView) findViewById(R.id.capture_image);
@@ -140,10 +140,10 @@ public class AddAttendance extends AppCompatActivity implements LocationListener
                 form_params.put("nandgram_id",String.valueOf(nandgram_id) );
                 form_params.put("user_id",String.valueOf(UserData.getInstance(getApplicationContext()).getUser_id()));
                 if(realPath==null||realPath.isEmpty()){
-                    Toast.makeText(getApplicationContext(),"Please click a picture!",Toast.LENGTH_LONG).show();
+                    Toast.makeText(getApplicationContext(),R.string.click_picture,Toast.LENGTH_LONG).show();
                 }
                 else if(head_count<=0){
-                    Toast.makeText(getApplicationContext(),"No faces detected, Please try again!",Toast.LENGTH_LONG).show();
+                    Toast.makeText(getApplicationContext(),R.string.no_face_detected,Toast.LENGTH_LONG).show();
                     return;
                 }
                 else
@@ -153,7 +153,7 @@ public class AddAttendance extends AppCompatActivity implements LocationListener
                     form_params.put("latitude", String.valueOf(attendance_location.latitude));
                 }
                 else{
-                    Toast.makeText(getApplicationContext(),"Still fetching location! Please wait!",Toast.LENGTH_LONG).show();
+                    Toast.makeText(getApplicationContext(),R.string.fetching_loc_in_process,Toast.LENGTH_LONG).show();
                     return;
                 }
                 new InsertAttendance(file_params,form_params).execute();
@@ -166,13 +166,13 @@ public class AddAttendance extends AppCompatActivity implements LocationListener
     private void startCameraActivity() {
 
         if (!isStoragePermissionGranted()) {
-            Toast.makeText(getApplicationContext(), "Please grant the required permissions", Toast.LENGTH_LONG).show();
+            Toast.makeText(getApplicationContext(), R.string.grant_permissions, Toast.LENGTH_LONG).show();
             return;
         }
 
         ContentValues values = new ContentValues();
-        values.put(MediaStore.Images.Media.TITLE, "Attendance Picture");
-        values.put(MediaStore.Images.Media.DESCRIPTION, "From Camera");
+        values.put(MediaStore.Images.Media.TITLE, R.string.attendance_picture);
+        values.put(MediaStore.Images.Media.DESCRIPTION, R.string.from_camera);
 
         selectedImage = getContentResolver().insert(
                 MediaStore.Images.Media.EXTERNAL_CONTENT_URI, values);
@@ -204,23 +204,23 @@ public class AddAttendance extends AppCompatActivity implements LocationListener
               realPath=getRealPathFromURI(getApplicationContext(),selectedImage);
 
                 if(head_count==0){
-                    face_detection_text.setText("No faces detected");
+                    face_detection_text.setText(R.string.no_face_detected);
                 }
                 else if(head_count==1){
-                    face_detection_text.setText("1 face detected");
+                    face_detection_text.setText(R.string.one_face_detected);
                 }
                 else{
-                    face_detection_text.setText(head_count+" faces detected");
+                    face_detection_text.setText(head_count+R.string.face_detected);
                 }
 
                 face_detection_text.setVisibility(View.VISIBLE);
                 mFaceOverlayView.setVisibility(View.VISIBLE);
-                Toast.makeText(getApplicationContext(),head_count+" faces detected",Toast.LENGTH_LONG).show();
+                Toast.makeText(getApplicationContext(),head_count+R.string.face_detected,Toast.LENGTH_LONG).show();
 
                 isImageCaptured = true;
             } catch (Exception e) {
                 e.printStackTrace();
-                Toast.makeText(this, "Unable to capture image!", Toast.LENGTH_SHORT).show();
+                Toast.makeText(this, R.string.image_capture_fail, Toast.LENGTH_SHORT).show();
             }
         }
     }
@@ -258,7 +258,7 @@ public class AddAttendance extends AppCompatActivity implements LocationListener
 
                 new AlertDialog.Builder(this)
                         .setTitle(R.string.app_name)
-                        .setMessage("Permission requrired to access your attendance_location.Kindly enable GPS.")
+                        .setMessage(R.string.enable_gps)
                         .setPositiveButton("OK", new DialogInterface.OnClickListener() {
                             @Override
                             public void onClick(DialogInterface dialogInterface, int i) {
@@ -385,7 +385,7 @@ public class AddAttendance extends AppCompatActivity implements LocationListener
 
     @Override
     public void onProviderDisabled(String s) {
-        Toast.makeText(getApplicationContext(),"Please Enable GPS!",Toast.LENGTH_LONG).show();
+        Toast.makeText(getApplicationContext(),R.string.enable_gps,Toast.LENGTH_LONG).show();
     }
 
     class InsertAttendance extends AsyncTask<String, String, String> {
@@ -410,13 +410,13 @@ public class AddAttendance extends AppCompatActivity implements LocationListener
         protected void onPostExecute(String s) {
             super.onPostExecute(s);
             if (success) {
-                Toast.makeText(getApplicationContext(), "Attendance updated", Toast.LENGTH_LONG).show();
+                Toast.makeText(getApplicationContext(), R.string.attendance_updated, Toast.LENGTH_LONG).show();
                 ;
                 submit.setEnabled(false);
                finish();
             } else {
                 submit.setEnabled(true);
-                Toast.makeText(getApplicationContext(), "Sorry there was an error!", Toast.LENGTH_LONG).show();
+                Toast.makeText(getApplicationContext(), R.string.profile_picture_update_fail, Toast.LENGTH_LONG).show();
                 ;
             }
             progressBar.setVisibility(View.GONE);

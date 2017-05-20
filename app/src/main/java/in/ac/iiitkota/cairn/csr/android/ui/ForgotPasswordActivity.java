@@ -56,7 +56,7 @@ public class ForgotPasswordActivity extends AppCompatActivity {
 
                 progressBar.setVisibility(View.VISIBLE);
                 otpContentHolder.setVisibility(View.GONE);
-                otpInstruction.setText("Verifying otp ... ");
+                otpInstruction.setText(R.string.otp_verification);
 //
                 String otp = etOTP.getText().toString().trim();
 

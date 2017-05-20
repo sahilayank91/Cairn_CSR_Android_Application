@@ -28,6 +28,7 @@
 
     <string name="retrieve_nandgrams">http://&server;NandgramService/getNandgramList/</string>
     <string name="insert_attendance">http://&server;NandgramService/addAttendance/</string>
+    <string name="get_attendance">http://&server;NandgramService/getAttendance/</string>
 
 
     <string name="navigation_drawer_open">Open navigation drawer</string>
@@ -74,4 +75,114 @@
     <string name="title_activity_nandgram_list">NandGharListActivity</string>
     <string name="dummy_nandgram_address">Hostel Aurobindo, MNIT Jaipur, JLN Road, Malaviya Nagar, Jaipur, Rajasthan</string>
     <string name="title_activity_nand_ghar_per_day_stats">NandGharPerDayStats</string>
+
+
+    <!-- TODO: Removing Hardcoded Strings -->
+    <string name="Edit">Edit</string>
+    <string name="Delete">Delete</string>
+    <string name="sure">Are you sure?</string>
+    <string name="cancel">Cancel</string>
+    <string name="proceed">Proceed</string>
+    <string name="error">Sorry there was an error!"</string>
+
+    <string name="enable_gps">Permission requrired to access your attendance_location.Kindly enable GPS.</string>
+
+    <string name="post_updated">Updated Post</string>
+    <string name="touched">Touched</string>
+    <string name="lives">Lives</string>
+    <string name="one_comment"> comment</string>
+    <string name="one_like"> Like</string>
+    <string name="comments"> comments</string>
+
+    <string name="profile_picture_updated">Profile Picture updated</string>
+    <string name="profile_picture_update_fail">Sorry there was an error!</string>
+
+    <string name="made_smile">made a person smile</string>
+
+    <string name="fetching_loc_in_process">Still fetching location! Please wait!</string>
+
+    <string name="axis_week">Week</string>
+    <string name="axis_smiles">Smiles</string>
+    <string name="axis_year">Year</string>
+    <string name="axis_day">Day</string>
+
+    <string name="click_picture">Please click a picture!</string>
+    <string name="no_face_detected">No faces detected, Please try again!</string>
+    <string name="one_face_detected">1 face Detected</string>
+    <string name="face_detected"> faces detected</string>
+    <string name="attendance_picture">Attendance Picture</string>
+    <string name="from_camera">From Camera</string>
+
+    <string name="comment_add">Add comment</string>
+    <string name="comment_delete">Comment deleted!</string>
+    <string name="error_deleting_comment">Error deleting comment!</string>
+
+    <string name="share_image">Share Image</string>
+    <string name="share_posts">Share Post</string>
+    <string name="share_with">Share with..</string>
+    <string name="select_team_share">Please select teams to share with!</string>
+    <string name="share_social">Share on Social Media</string>
+    <string name="people_liked">People liked this post</string>
+    <string name="post_share_successful">Post shared Successfully</string>
+    <string name="post_share_unsuccessful">Sorry! The post could not be shared!</string>
+
+    <string name="milestone_add">Add Milestone</string>
+    <string name="milestone_edit">Edit Milestone</string>
+
+    <string name="milestone_delete_success">Milestone Deleted!</string>
+    <string name="milestone_delete_unsuccess">Milestone Could not be Deleted!</string>
+
+    <string name="grant_permissions">Please grant the required permissions</string>
+
+    <string name="select_picture">Select Picture</string>
+
+    <string name="image_capture_fail">Unable to capture image!</string>
+    <string name="type_desc">Please type a description!</string>
+
+
+    <string name="add_attendance">Add Attendance</string>
+    <string name="attendance_updated">Attendance updated</string>
+
+    <string name="otp_verification">Verifying otp ... </string>
+    <string name="fill_all_field">Please fill all fields</string>
+    <string name="password_match_fail">Passwords dont match!</string>
+    <string name="password_update_success">Password Updated Successfully!</string>
+    <string name="incorrect_credential">Incorrect Credentials</string>
+
+    <string name="offline">You are Offline!!</string>
+
+    <string name="nandghar_list">NandGhar list</string>
+    <string name="nandghar_per_day_stats">NandGhar per day stats</string>
+    <string name="nandghar_stat">Nandgram Statistics</string>
+
+    <string name="reg_success">Registered Successfully!</string>
+
+    <string name="water_supplied">Water Supplied</string>
+    <string name="purifier_setup">Purifier set up!</string>
+    <string name="milkplant_setup">Milk Plant set up!</string>
+    <string name="public_toilet_setup">Public Toilet set up!</string>
+    <string name="mobile_health_van">Mobile Health Van Drive conducted</string>
+    <string name="fire_awareness">Fire awareness campaign</string>
+    <string name="skill">Skills</string>
+    <string name="nat_res_management">Natural Resource Management</string>
+    <string name="jeevan_amrit">Jeevan Amrit</string>
+    <string name="nandghar">Nandghar</string>
+    <string name="health">Health</string>
+    <string name="jan_sanvaad">Jan Sanvaad</string>
+    <string name="education">Education</string>
+    <string name="milk">Milk</string>
+
+
+
+
+
+
+    <string name="del_comment">Delete Comment</string>
+
+
+
+
+
+
+
 </resources>

@@ -76,7 +76,7 @@ public class CommentsAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolde
             HeaderViewHolder headerViewHolder = (HeaderViewHolder) holder;
 
             headerViewHolder.authorName.setText(post.getAuthor().getName());
-            if(post.getSmiles()<1)headerViewHolder.title.setText("updated a post");
+            if(post.getSmiles()<1)headerViewHolder.title.setText(R.string.post_updated);
            else  headerViewHolder.title.setText("touched "+post.getSmiles()+" lives!");
             headerViewHolder.newsFeedDescription.setText(post.getText());
             headerViewHolder.newsFeedDate.setText(DateUtils.getRelativeTimeSpanString(post.getTime(),new java.util.Date().getTime(),DateUtils.FORMAT_ABBREV_RELATIVE));
@@ -87,14 +87,14 @@ public class CommentsAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolde
                     .into(headerViewHolder.profileImage);
 
             if(post.getComments_count()==1)
-                headerViewHolder.total_comments.setText("1 comment");
+                headerViewHolder.total_comments.setText(R.string.one_comment);
             else if(post.getComments_count()>1){
                 headerViewHolder.total_comments.setText(post.getComments_count()+" comments");
             }
             else headerViewHolder.total_comments.setText("");
 
             if(post.getLikes_count()==1)
-                headerViewHolder.total_likes.setText("1 like");
+                headerViewHolder.total_likes.setText(R.string.one_like);
             else if(post.getLikes_count()>1){
                 headerViewHolder.total_likes.setText(post.getLikes_count()+" likes");
             }

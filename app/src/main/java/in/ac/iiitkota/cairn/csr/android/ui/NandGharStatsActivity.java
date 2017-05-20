@@ -28,7 +28,7 @@ public class NandGharStatsActivity extends AppCompatActivity {
         setContentView(R.layout.activity_nandghar_stats);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
-        getSupportActionBar().setTitle("Nandgram Statistics");
+        getSupportActionBar().setTitle(R.string.nandghar_stat);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
         week_fragment = new AttendanceFragment();

@@ -89,7 +89,7 @@ public class MyActivityAdapter extends RecyclerView.Adapter<RecyclerView.ViewHol
             holder.authorName.setText(current.getAuthor().getName());
             holder.newsFeedDescription.setText(current.getText());
             if(current.getSmiles()>0)holder.title.setText("touched "+current.getSmiles()+" lives");
-            else holder.title.setText("updated a post");
+            else holder.title.setText(R.string.post_updated);
 
             holder.newsFeedDate.setText(DateUtils.getRelativeTimeSpanString(current.getTime(), new java.util.Date().getTime(), DateUtils.FORMAT_ABBREV_RELATIVE));
             if (current.getImages() != null && current.getImages().size() > 0) {
