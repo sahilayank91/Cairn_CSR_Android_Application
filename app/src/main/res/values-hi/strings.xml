@@ -171,4 +171,60 @@
     <string name="education">शिक्षा</string>
     <string name="milk">दूध </string>
     <string name="del_comment"></string>
+
+
+
+
+
+
+
+
+
+
+
+
+    <!-- TODO: New XML elements-->
+
+
+    <string name="del_comment">Delete Comment</string>
+    <string name="share">Share</string>
+    <string name="change_password">Change Password</string>
+    <string name="change_lang">Change Language</string>
+    <string name="logout">Logout</string>
+    <string name="total_smiles">Total Smiles</string>
+    <string name="total_teams">Total teams</string>
+    <string name="total_members">Total members</string>
+    <string name="about_team">About team - </string>
+    <string name="source_name">Source name</string>
+    <string name="admin">admin</string>
+    <string name="like">Like</string>
+    <string name="comment">Comment</string>
+    <string name="submit_feedback">Submit feedback</string>
+    <string name="see_activity">See Activities</string>
+    <string name="provide_short_feedback">Provide short feedback ... </string>
+    <string name="team_name">Team name</string>
+    <string name="suggestion">Suggestion</string>
+    <string name="camera">Camera</string>
+    <string name="gallery">Gallery</string>
+    <string name="department">DEPARTMENT</string>
+    <string name="mem_since">MEMBER SINCE</string>
+    <string name="summary">SUMMARY</string>
+    <string name="verify">Verify</string>
+    <string name="update">UPDATE</string>
+    <string name="update_profile">Update Profile</string>
+    <string name="num_lives_touched">Number of Lives Touched</string>
+    <string name="add_milestone_image">Add milestone images</string>
+    <string name="share_option">Sharing option</string>
+    <string name="submit_milestone">Submit Milestone</string>
+    <string name="per_day_stats">Per Day Stats</string>
+    <string name="choose_date">Choose Date</string>
+    <string name="your_message">Your message</string>
+    <string name="capture_image">Capture Image</string>
+    <string name="location">Location</string>
+    <string name="submit_attendance">Submit Attendance</string>
+    <string name="register">Register</string>
+    <string name="login">Login</string>
+    <string name="reset_pass">RESET PASSWORD</string>
+
+
 </resources>
