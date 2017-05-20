@@ -195,11 +195,11 @@ public class CommentDetailsActivity extends AppCompatActivity implements RCVItem
         PopupMenu popupMenu = new PopupMenu(this, clickedView);
 
         if(post.getAuthor().getUser_id()==UserData.getInstance(this).getUser().getUser_id()){
-            popupMenu.getMenu().add(Menu.NONE, 1,1, "Edit");
-            popupMenu.getMenu().add(Menu.NONE, 2,2,"Delete");
+            popupMenu.getMenu().add(Menu.NONE, 1,1, R.string.Edit);
+            popupMenu.getMenu().add(Menu.NONE, 2,2,R.string.Delete);
         }
 
-        popupMenu.getMenu().add(Menu.NONE, 3,3,"Share on Social Media");
+        popupMenu.getMenu().add(Menu.NONE, 3,3,R.string.share_social);
 
         popupMenu.show();
 
@@ -228,7 +228,7 @@ public class CommentDetailsActivity extends AppCompatActivity implements RCVItem
                     case 3:
                         String text="";
                         if (post.getSmiles() > 1)
-                            text="made " + post.getSmiles() + " people smile";
+                            text=getResources().getString(R.string.made) + post.getSmiles() + getResources().getString(R.string.people_smile);
                         else if (post.getSmiles() == 1)
                             text=getResources().getString(R.string.made_smile);
                         else
@@ -400,7 +400,7 @@ public class CommentDetailsActivity extends AppCompatActivity implements RCVItem
     private void popupShareDialog(final Long post_id) {
 
         final Dialog dialog = new Dialog(this,R.style.AppTheme_CustomDialog);
-        dialog.setTitle("Share with ... ");
+        dialog.setTitle(R.string.share_with);
         dialog.setContentView(R.layout.dialog_share);
 
 

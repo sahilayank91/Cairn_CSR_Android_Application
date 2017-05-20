@@ -1,4 +1,4 @@
-﻿<!DOCTYPE resources [<!ENTITY server "139.59.1.193:8080/CairnCSR/rest/"><!ENTITY image_server "139.59.1.193:8080/CairnCSR/images/"><!ENTITY profile_server "139.59.1.193:8080/CairnCSR/profile_pictures/">]>
+<!DOCTYPE resources [<!ENTITY server "139.59.1.193:8080/CairnCSR/rest/"><!ENTITY image_server "139.59.1.193:8080/CairnCSR/images/"><!ENTITY profile_server "139.59.1.193:8080/CairnCSR/profile_pictures/">]>
 
 <resources>
     <string name="app_name">Cairn CSR</string>
@@ -151,7 +151,7 @@
 
     <string name="nandghar_list">नंदघर की सूची</string>
     <string name="nandghar_per_day_stats">नंदघर प्रति दिन आँकड़े</string>
-    <string name="per_day_stats"> प्रति दिन आँकड़े</string>
+
     <string name="nandghar_stat">नंदग्राम सांख्यिकी</string>
 
     <string name="reg_success">सफलतापूर्वक पंजीकृत!</string>
@@ -170,20 +170,9 @@
     <string name="jan_sanvaad">जन सवांद </string>
     <string name="education">शिक्षा</string>
     <string name="milk">दूध </string>
-    <string name="del_comment">टिप्पणी हटाएं</string>
 
 
 
-
-
-
-
-
-
-
-
-
-    <!-- TODO: New XML elements-->
 
 
     <string name="del_comment">टिप्पणी हटाएं</string>
@@ -227,4 +216,8 @@
     <string name="reset_pass">पासवर्ड फिर से कायम करें</string>
 
 
+    <!-- TODO: New XML elements-->
+    <string name="made"></string>
+    <string name="people_smile"> लोगों को मुस्कान दिया</string>
+    <string name="you_like">आपको यह पोस्ट पसंद आया!</string>
 </resources>

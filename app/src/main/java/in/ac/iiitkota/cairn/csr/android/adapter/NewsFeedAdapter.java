@@ -127,22 +127,22 @@ public class NewsFeedAdapter extends RecyclerView.Adapter<NewsFeedAdapter.NewsFe
                 .load(profile_image_url).placeholder(R.drawable.profile_image_place_holder)
                 .into(holder.profileImage);
         if (current.getSmiles() > 1)
-            holder.title.setText("made " + current.getSmiles() + " people smile");
+            holder.title.setText(context.getResources().getString(R.string.made).toString() + " " + current.getSmiles() + " " + context.getResources().getString(R.string.people_smile).toString());
         else if (current.getSmiles() == 1)
-            holder.title.setText(R.string.made_smile);
+            holder.title.setText(context.getResources().getString(R.string.made_smile).toString());
         else
-            holder.title.setText(R.string.post_updated);
+            holder.title.setText(context.getResources().getString(R.string.post_updated).toString());
 
 
         if (current.getComments_count() == 1)
-            holder.total_comments.setText(R.string.one_comment);
+            holder.total_comments.setText("1 " +context.getResources().getString(R.string.comment).toString());
         else if (current.getComments_count() > 1) {
-            holder.total_comments.setText(current.getComments_count() + " comments");
+            holder.total_comments.setText(current.getComments_count() + " " + context.getResources().getString(R.string.comment).toString());
         } else holder.total_comments.setText("");
         if (current.getLikes_count() == 1)
-            holder.total_likes.setText(R.string.one_like);
+            holder.total_likes.setText("1" + context.getResources().getString(R.string.like).toString());
         else if (current.getLikes_count() > 1) {
-            holder.total_likes.setText(current.getLikes_count() + " likes");
+            holder.total_likes.setText(current.getLikes_count() + " " + context.getResources().getString(R.string.like).toString());
         } else holder.total_likes.setText("");
         final String post_id = String.valueOf(current.getPost_id());
 
@@ -177,15 +177,15 @@ public class NewsFeedAdapter extends RecyclerView.Adapter<NewsFeedAdapter.NewsFe
                 if (!liked) {
 
                     params.put("set_like", "1");
-                    holder.total_likes.setText((current.getLikes_count()+1)+ " likes");
+                    holder.total_likes.setText((current.getLikes_count()+1)+ " "+ context.getResources().getString(R.string.like).toString());
                     holder.iconLike.setImageResource(R.drawable.ic_like_black_24dp);
                     holder.likeLabel.setTextColor(Color.BLACK);
                     current.getLikers().add(UserData.getInstance(AppSingleton.getInstance().getApplicationContext()).getUser());
                     current.setLikes_count(current.getLikes_count()+1);
-                    Toast.makeText(AppSingleton.getInstance().getApplicationContext(), "You liked this post!", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(AppSingleton.getInstance().getApplicationContext(), R.string.you_like, Toast.LENGTH_SHORT).show();
                 } else {
                     params.put("set_like", "0");
-                    holder.total_likes.setText((current.getLikes_count()-1) + " likes");
+                    holder.total_likes.setText((current.getLikes_count()-1) + " "+context.getResources().getString(R.string.like).toString());
                     current.setLikes_count(current.getLikes_count()-1);
                     holder.iconLike.setImageResource(R.drawable.ic_like_grey_24dp);
                     holder.likeLabel.setTextColor(Color.GRAY);

@@ -91,8 +91,8 @@
     <string name="post_updated">Updated Post</string>
     <string name="touched">Touched</string>
     <string name="lives">Lives</string>
-    <string name="one_comment"> comment</string>
-    <string name="one_like"> Like</string>
+    <string name="comment"> comment</string>
+    <string name="like"> Like</string>
     <string name="comments"> comments</string>
 
     <string name="profile_picture_updated">Profile Picture updated</string>
@@ -189,8 +189,6 @@
     <string name="about_team">About team - </string>
     <string name="source_name">Source name</string>
     <string name="admin">admin</string>
-    <string name="like">Like</string>
-    <string name="comment">Comment</string>
     <string name="submit_feedback">Submit feedback</string>
     <string name="see_activity">See Activities</string>
     <string name="provide_short_feedback">Provide short feedback ... </string>
@@ -217,4 +215,7 @@
     <string name="register">Register</string>
     <string name="login">Login</string>
     <string name="reset_pass">RESET PASSWORD</string>
+    <string name="made">made </string>
+    <string name="people_smile"> people smile</string>
+    <string name="you_like">You Liked this Post!</string>
 </resources>

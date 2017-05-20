@@ -264,7 +264,7 @@
             android:layout_marginTop="10dp"
             android:background="@color/colorAccent"
             android:padding="@dimen/button_padding"
-            android:text="@string/submit_milstone"
+            android:text="@string/submit_milestone"
             android:textColor="@android:color/white"
             android:textStyle="bold" />
 
