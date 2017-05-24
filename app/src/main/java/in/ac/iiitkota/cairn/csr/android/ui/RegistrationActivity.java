@@ -34,7 +34,7 @@ public class RegistrationActivity extends AppCompatActivity {
 
     private EditText reg_email, reg_department,reg_name, reg_contact, reg_password, reg_repeat_password;
     String email, name, department, contact, password, repeat_password;
-    final String cairn_email = "@cairn.co.in";
+    final String cairn_email = "@cairnindia.com";
     final String vedanta_email ="@vedanta.co.in";
     Button register_button;
 
@@ -95,7 +95,7 @@ public class RegistrationActivity extends AppCompatActivity {
         });
     }
 
-
+/*
     class verifyUser extends AsyncTask<String,String,String>{
 
         boolean success = false;
@@ -131,7 +131,7 @@ public class RegistrationActivity extends AppCompatActivity {
         }
     }
 
-
+*/
 
     class RegisterUser extends AsyncTask<String, String, String> {
         boolean success = false;
@@ -152,7 +152,7 @@ public class RegistrationActivity extends AppCompatActivity {
             super.onPostExecute(s);
             if (success) {
                 Toast.makeText(getApplicationContext(), R.string.reg_success, Toast.LENGTH_LONG).show();
-                Intent intent = new Intent(RegistrationActivity.this, MainActivity.class);
+                Intent intent = new Intent(RegistrationActivity.this, LoginActivity.class);
                 intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
                 startActivity(intent);
                 finish();

@@ -130,7 +130,8 @@
     <string name="people_liked">People liked this post</string>
     <string name="post_share_successful">Post shared Successfully</string>
     <string name="post_share_unsuccessful">Sorry! The post could not be shared!</string>
-
+<string name="one_comment">1 comment</string>
+    <string name="one_like">1 Like</string>
     <string name="milestone_add">Add Milestone</string>
     <string name="milestone_edit">Edit Milestone</string>
 
@@ -224,7 +225,7 @@
     <string name="you_like">You Liked this Post!</string>
     <string name="change_date">Change Date</string>
 
-
+    <string name="new_user">New User?Sign Up</string>
 
     <string-array name="departments_array">
         <item>Water Project</item>
