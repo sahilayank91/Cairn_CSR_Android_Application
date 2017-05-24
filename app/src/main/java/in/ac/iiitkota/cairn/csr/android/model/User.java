@@ -1,14 +1,19 @@
 package in.ac.iiitkota.cairn.csr.android.model;
 
 
+import android.content.Context;
+
 import org.json.JSONException;
 import org.json.JSONObject;
 
 public class User {
 
 	private long user_id;
-	private String name,email,password,salt,phone;
+	private String name,email,password,salt,phone,otp,department;
 	private int account_level;
+	Boolean verify;
+
+
 	public User(){
 
 	}
@@ -18,14 +23,21 @@ public class User {
 		if(author.has("phone"))this.phone=author.getString("phone");
 		if(author.has("email"))this.email=author.getString("email");
 		if(author.has("account_level"))this.account_level=author.getInt("account_level");
+		if(author.has("verified"))this.verify = author.getBoolean("verified");
+		if(author.has("otp"))this.otp = author.getString("otp");
+		if(author.has("department"))this.department = author.getString("department");
 
 	}
 
+	public User(Context context){
+
+
+	}
 	@Override
 	public boolean equals(Object obj) {
 		User user=(User)obj;
 		if(user.getUser_id()==this.user_id)
-		return true;
+			return true;
 		else return false;
 	}
 
@@ -65,6 +77,12 @@ public class User {
 	public void setPhone(String phone) {
 		this.phone = phone;
 	}
+	public String getOTP(){ return otp;}
+	public void setOtp(String otp){this.otp = otp; }
+	public Boolean getVerifY(boolean verify){ return this.verify;}
+	public void setVerify(boolean verify){this.verify = verify;}
+	public String getDepartment(){return this.department;}
+	public void setDepartment(String department){this.department = department;}
 
 	public int getAccount_level() {
 		return account_level;

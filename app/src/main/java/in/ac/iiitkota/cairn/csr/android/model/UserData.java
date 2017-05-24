@@ -9,10 +9,11 @@ import in.ac.iiitkota.cairn.csr.android.SharedPreferenceSingleton;
  */
 public class UserData {
     private static UserData ourInstance = new UserData();
-    private String username, email, contact;
+    private String username, email, contact,department;
     private int account_level;
     private Long user_id;
     private Context context;
+    Boolean verify;
 
 
     private UserData() {
@@ -25,7 +26,7 @@ public class UserData {
         }
 
         try {
-           Long id= ourInstance.getUser_id();
+            Long id= ourInstance.getUser_id();
             if(id==null)throw new Exception();
         } catch (Exception e) {
             ourInstance = null;
@@ -47,7 +48,7 @@ public class UserData {
 
 
 
-//    public void initUserData(String data, Context context) throws Exception {
+    //    public void initUserData(String data, Context context) throws Exception {
 //        this.context = context;
 //        JSONObject userdata = new JSONObject(data);
 //
@@ -78,11 +79,14 @@ public class UserData {
             this.contact = SharedPreferenceSingleton.getInstance(context).getString("contact");
             this.email = SharedPreferenceSingleton.getInstance(context).getString("email");
             this.account_level=SharedPreferenceSingleton.getInstance(context).getInt("account_level");
+            this.verify = SharedPreferenceSingleton.getInstance(context).getBoolean("verified");
+            this.department = SharedPreferenceSingleton.getInstance(context).getString("department");
+
         } catch (Exception e) {
             e.printStackTrace();
             return false;
         }
-        if(this.user_id==0)return false;
+        if(this.user_id==0 || this.verify==false)return false;
         return true;
     }
 
@@ -128,5 +132,13 @@ public class UserData {
     public void setAccount_level(int account_level) {
         this.account_level = account_level;
         SharedPreferenceSingleton.getInstance(context).put("account_level", account_level);
+    }
+
+    public void setVerify(Boolean verify){
+        this.verify = verify;
+    }
+
+    public Boolean getVerify(){
+        return this.verify;
     }
 }

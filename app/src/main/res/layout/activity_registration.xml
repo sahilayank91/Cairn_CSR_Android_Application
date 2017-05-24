@@ -110,7 +110,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:orientation="vertical"
-                    android:visibility="gone">
+                    android:visibility="visible">
 
                     <!--Name holder-->
                     <android.support.design.widget.TextInputLayout
@@ -145,15 +145,18 @@
 
                         <!--Department-->
                         <EditText
-                            android:id="@+id/reg_department"
+                            android:id="@+id/dept"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:hint="@string/reg_department_hint"
                             android:inputType="text"
+                            android:hint="Department"
+                            android:textSize="20dp"
                             android:paddingBottom="16dp"
                             android:paddingTop="16dp" />
-
                     </android.support.design.widget.TextInputLayout>
+
+
+
 
 
                     <!--Contact holder-->

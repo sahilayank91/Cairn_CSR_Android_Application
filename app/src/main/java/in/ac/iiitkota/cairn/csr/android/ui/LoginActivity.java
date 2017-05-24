@@ -22,7 +22,7 @@ import java.util.HashMap;
 
 public class LoginActivity extends AppCompatActivity {
     TextView login_email, login_password;
-    Button login_button, forgot_password;
+    Button login_button, forgot_password,sign_up;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -55,6 +55,15 @@ public class LoginActivity extends AppCompatActivity {
                 Intent intent = new Intent(LoginActivity.this, RegistrationActivity.class);
                 startActivity(intent);
 
+            }
+        });
+
+        sign_up =(Button)findViewById(R.id.signup_button);
+        sign_up.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent  = new Intent(LoginActivity.this,RegistrationActivity.class);
+                startActivity(intent);
             }
         });
 

@@ -5,6 +5,9 @@
     <string name="login_url">http://&server;AuthenticationService/Login</string>
     <string name="change_password_url">http://&server;AuthenticationService/updatePassword</string>
     <string name="register_url">http://&server;AuthenticationService/register</string>
+    <string name="send_otp">http://&server;AuthenticationService/addOTP</string>
+    <string name="get_otp">http://&server;AuthenticationService/getOTP</string>
+    <string name="verify_email">http://&server;AuthenticationService/verify</string>
     <string name="retrieve_profile">http://&server;AuthenticationService/RetrieveUserProfile/</string>
     <string name="update_profile_picture">http://&server;AuthenticationService/updateProfilePic/</string>
     <string name="retrieve_user_statistics">http://&server;StatisticsService/getStatistics/</string>
@@ -29,6 +32,7 @@
     <string name="retrieve_nandgrams">http://&server;NandgramService/getNandgramList/</string>
     <string name="insert_attendance">http://&server;NandgramService/addAttendance/</string>
     <string name="get_attendance">http://&server;NandgramService/getAttendance/</string>
+    <string name="get_day_attendance">http://&server;NandgramService/getNandgramDayAttendance/</string>
 
 
     <string name="navigation_drawer_open">Open navigation drawer</string>
@@ -148,7 +152,7 @@
     <string name="fill_all_field">Please fill all fields</string>
     <string name="password_match_fail">Passwords dont match!</string>
     <string name="password_update_success">Password Updated Successfully!</string>
-    <string name="incorrect_credential">Incorrect Credentials</string>
+    <string name="incorrect_credential">Incorrect Credentials or You need to activate your account</string>
 
     <string name="offline">You are Offline!!</string>
 
@@ -218,4 +222,17 @@
     <string name="made">made </string>
     <string name="people_smile"> people smile</string>
     <string name="you_like">You Liked this Post!</string>
+    <string name="change_date">Change Date</string>
+
+
+
+    <string-array name="departments_array">
+        <item>Water Project</item>
+        <item>Health Campaign</item>
+        <item>Training Center</item>
+        <item>Water Project</item>
+        <item>Women Empoverment</item>
+        <item>Cairn India CSR</item>
+    </string-array>
+
 </resources>

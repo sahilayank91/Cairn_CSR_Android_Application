@@ -127,7 +127,19 @@
                     android:background="?attr/selectableItemBackground"
                     android:text="Forgot your password?"
                     android:textColor="@color/colorAccent"
-                    android:visibility="gone" />
+                    android:visibility="visible" />
+                <!-- New user Signup-->
+
+                <Button
+                    android:id="@+id/signup_button"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/content_margin_left"
+                    android:layout_marginRight="@dimen/content_margin_right"
+                    android:background="?attr/selectableItemBackground"
+                    android:text="New User?Sign Up"
+                    android:textColor="@color/colorAccent"
+                    android:visibility="visible" />
 
             </LinearLayout>
 

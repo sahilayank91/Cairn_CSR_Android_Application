@@ -5,6 +5,9 @@
     <string name="login_url">http://&server;AuthenticationService/Login</string>
     <string name="change_password_url">http://&server;AuthenticationService/updatePassword</string>
     <string name="register_url">http://&server;AuthenticationService/register</string>
+    <string name="send_otp">http://&server;AuthenticationService/addOTP</string>
+    <string name="get_otp">http://&server;AuthenticationService/getOTP</string>
+    <string name="verify_email">http://&server;AuthenticationService/verify</string>
     <string name="retrieve_profile">http://&server;AuthenticationService/RetrieveUserProfile/</string>
     <string name="update_profile_picture">http://&server;AuthenticationService/updateProfilePic/</string>
     <string name="retrieve_user_statistics">http://&server;StatisticsService/getStatistics/</string>
@@ -186,7 +189,7 @@
     <!-- TODO: New XML elements-->
 
 
-    <string name="del_comment">टिप्पणी हटाएं</string>
+
     <string name="share">साझा करे</string>
     <string name="change_password">पासवर्ड बदलें</string>
     <string name="change_lang">भाषा बदलो</string>
@@ -216,7 +219,7 @@
     <string name="add_milestone_image">घटना चित्र जोड़ें</string>
     <string name="share_option">साझा विकल्प</string>
     <string name="submit_milestone">घटना दर्ज करे</string>
-    <string name="per_day_stats">प्रति दिन आंकड़े</string>
+
     <string name="choose_date">तिथि चुनें</string>
     <string name="your_message">आपका सन्देश</string>
     <string name="capture_image">चित्र खींचे  </string>
@@ -226,5 +229,9 @@
     <string name="login">लॉग इन करें</string>
     <string name="reset_pass">पासवर्ड फिर से कायम करें</string>
 
+
+
+
+    <string name="new_user">New User?Sign Up</string>
 
 </resources>

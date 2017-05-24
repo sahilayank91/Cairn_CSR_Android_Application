@@ -11,6 +11,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.LinearLayout;
 import android.widget.ProgressBar;
+import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -30,8 +31,11 @@ public class RegistrationActivity extends AppCompatActivity {
     private Button btnNext;
     private LinearLayout emailAndNextButtonHolder;
     private LinearLayout restUserDataHolder;
-    private EditText reg_email, reg_name, reg_department, reg_contact, reg_password, reg_repeat_password;
+
+    private EditText reg_email, reg_department,reg_name, reg_contact, reg_password, reg_repeat_password;
     String email, name, department, contact, password, repeat_password;
+    final String cairn_email = "@cairn.co.in";
+    final String vedanta_email ="@vedanta.co.in";
     Button register_button;
 
     @Override
@@ -48,13 +52,26 @@ public class RegistrationActivity extends AppCompatActivity {
         reg_password = (EditText) findViewById(R.id.reg_password);
         reg_repeat_password = (EditText) findViewById(R.id.reg_repeat_password);
 
+
         btnNext = (Button) findViewById(R.id.reg_next_button);
         btnNext.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 //send otp on entered email and on success pop up dialog
-                popupOTPDialog();
                 email = reg_email.getText().toString();
+
+                if(email.toLowerCase().contains(cairn_email.toLowerCase())  || email.toLowerCase().contains(vedanta_email.toLowerCase())){
+
+                    Toast.makeText(RegistrationActivity.this,"Cairn Id Supplied",Toast.LENGTH_SHORT).show();
+                }else{
+                    Toast.makeText(RegistrationActivity.this,"Only Cairn and Vedanta Email users are allowed",Toast.LENGTH_LONG).show();
+                    Intent intent = new Intent(RegistrationActivity.this,RegistrationActivity.class);
+                    startActivity(intent);
+                    finish();
+                }
+                emailAndNextButtonHolder.setVisibility(View.GONE);
+                restUserDataHolder.setVisibility(View.VISIBLE);
+
             }
         });
         register_button = (Button) findViewById(R.id.register_button);
@@ -78,6 +95,44 @@ public class RegistrationActivity extends AppCompatActivity {
         });
     }
 
+
+    class verifyUser extends AsyncTask<String,String,String>{
+
+        boolean success = false;
+        HashMap<String, String> params = new HashMap<>();
+        @Override
+        protected void onPreExecute() {
+            super.onPreExecute();
+            params.put("user_email",email);
+        }
+
+        @Override
+        protected void onPostExecute(String s) {
+            super.onPostExecute(s);
+            popupOTPDialog();
+        }
+
+
+        @Override
+        protected String doInBackground(String... strings) {
+            String result = "";
+
+            try {
+                result = Server.performServerCall(getResources().getString(R.string.verify_email),params,"POST");
+                success=true;
+
+                return result;
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+
+
+            return null;
+        }
+    }
+
+
+
     class RegisterUser extends AsyncTask<String, String, String> {
         boolean success = false;
         HashMap<String, String> params = new HashMap<>();
@@ -89,6 +144,7 @@ public class RegistrationActivity extends AppCompatActivity {
             params.put("user_email", email);
             params.put("user_phone", contact);
             params.put("user_password", password);
+            params.put("user_dept",department);
         }
 
         @Override
@@ -140,7 +196,7 @@ public class RegistrationActivity extends AppCompatActivity {
 
                 progressBar.setVisibility(View.VISIBLE);
                 otpContentHolder.setVisibility(View.GONE);
-                otpInstruction.setText("Verifying otp ... ");
+                otpInstruction.setText("Verify via email sent to you..");
 //
                 String otp = etOTP.getText().toString().trim();
 
