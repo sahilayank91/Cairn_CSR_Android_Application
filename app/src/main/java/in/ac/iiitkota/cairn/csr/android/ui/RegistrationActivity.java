@@ -63,12 +63,16 @@ public class RegistrationActivity extends AppCompatActivity {
                 if(email.toLowerCase().contains(cairn_email.toLowerCase())  || email.toLowerCase().contains(vedanta_email.toLowerCase())){
 
                     Toast.makeText(RegistrationActivity.this,"Cairn Id Supplied",Toast.LENGTH_SHORT).show();
-                }else{
+                }
+                /*else{
+
+
                     Toast.makeText(RegistrationActivity.this,"Only Cairn and Vedanta Email users are allowed",Toast.LENGTH_LONG).show();
                     Intent intent = new Intent(RegistrationActivity.this,RegistrationActivity.class);
-                    startActivity(intent);
                     finish();
-                }
+                    startActivity(intent);
+
+                }*/
                 emailAndNextButtonHolder.setVisibility(View.GONE);
                 restUserDataHolder.setVisibility(View.VISIBLE);
 

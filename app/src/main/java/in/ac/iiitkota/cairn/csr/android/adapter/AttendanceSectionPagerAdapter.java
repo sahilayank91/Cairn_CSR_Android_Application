@@ -16,6 +16,7 @@ import in.ac.iiitkota.cairn.csr.android.AppSingleton;
 import in.ac.iiitkota.cairn.csr.android.R;
 import in.ac.iiitkota.cairn.csr.android.model.Statistics;
 import in.ac.iiitkota.cairn.csr.android.ui.fragments.AttendanceFragment;
+import in.ac.iiitkota.cairn.csr.android.ui.fragments.SmilesFragment;
 import in.ac.iiitkota.cairn.csr.android.utilities.Server;
 
 /**
@@ -36,36 +37,34 @@ public class AttendanceSectionPagerAdapter extends FragmentStatePagerAdapter {
         super(fm);
         this.domain = domain;
         this.object_id = object_id;
-        // new GetSmileData(week_fragment,month_fragment,year_fragment,statistics,domain,object_id).execute();
-        new GetSmileData(statistics, domain, object_id).execute();
         week_fragment = new AttendanceFragment();
         month_fragment = new AttendanceFragment();
         year_fragment = new AttendanceFragment();
+        new GetSmileData(week_fragment,month_fragment,year_fragment,statistics,domain,object_id).execute();
+        new StatisticsSectionPagerAdapter.GetSmileData(statistics, domain, object_id).execute();
+
     }
 
     @Override
     public Fragment getItem(int position) {
         switch (position) {
             case 0:
-//                if(week_fragment==null){
-//                    week_fragment=new AttendanceFragment();
-//                 //   week_fragment.scope="week";
-//                }
-//
-
-
+                if(week_fragment==null){
+                    week_fragment=new AttendanceFragment();
+                 week_fragment.scope="week";
+              }
                 return week_fragment;
             case 1:
-//                if(month_fragment==null){
-//                    month_fragment=new AttendanceFragment();
-//                  //  month_fragment.scope="month";
-//                }
+                if(month_fragment==null){
+                    month_fragment=new AttendanceFragment();
+                  month_fragment.scope="month";
+                }
                 return month_fragment;
             case 2:
-//                if(year_fragment==null){
-//                    year_fragment=new AttendanceFragment();
-//                  //  year_fragment.scope="year";
-//                }
+               if(year_fragment==null){
+                    year_fragment=new AttendanceFragment();
+                  year_fragment.scope="year";
+               }
                 return year_fragment;
 
         }
@@ -78,20 +77,30 @@ public class AttendanceSectionPagerAdapter extends FragmentStatePagerAdapter {
         return 3;
     }
 
-    public class GetSmileData extends AsyncTask<String, String, String> {
-        //        AttendanceFragment week_fragment;
-//         AttendanceFragment month_fragment;
-//        AttendanceFragment year_fragment;
+     class GetSmileData extends AsyncTask<String, String, String> {
+        AttendanceFragment week_fragment = new AttendanceFragment();
+        AttendanceFragment month_fragment = new AttendanceFragment();
+        AttendanceFragment year_fragment = new AttendanceFragment();
         Statistics statistics;
         public String domain;
         public Long object_id;
 
-        public GetSmileData(Statistics statistics
-                , String domain, Long object_id) {
+        public GetSmileData(Statistics statistics, String domain, Long object_id) {
 
+                this.statistics = statistics;
             this.domain = domain;
             this.object_id = object_id;
 
+        }
+
+        public GetSmileData(AttendanceFragment week_fragment, AttendanceFragment month_fragment, AttendanceFragment year_fragment, Statistics statistics, String domain, Long object_id) {
+
+            this.week_fragment  = week_fragment;
+            this.month_fragment = month_fragment;
+            this.year_fragment = year_fragment;
+            this.statistics = statistics;
+            this.domain = domain;
+            this.object_id = object_id;
         }
 
         @Override

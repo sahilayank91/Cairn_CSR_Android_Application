@@ -10,6 +10,9 @@
     <string name="verify_email">http://&server;AuthenticationService/verify</string>
     <string name="retrieve_profile">http://&server;AuthenticationService/RetrieveUserProfile/</string>
     <string name="update_profile_picture">http://&server;AuthenticationService/updateProfilePic/</string>
+    <string name="update_profile_url">http://&server;AuthenticationService/UpdateUserProfile/</string>
+
+
     <string name="retrieve_user_statistics">http://&server;StatisticsService/getStatistics/</string>
     <string name="retrieve_news_feed">http://&server;NewsfeedService/RetrieveNewsfeedPosts/</string>
     <string name="retrieve_author_feed">http://&server;NewsfeedService/RetrieveAuthorPosts/</string>
@@ -26,13 +29,13 @@
     <string name="update_feedback">http://&server;FeedbackService/updateFeedback/</string>
     <string name="set_like">http://&server;PostService/AddLike/</string>
     <string name="share_post">http://&server;PostService/SharePost/</string>
-    <string name="images">http://&image_server;/</string>
+    <string name="images">http://&image_server;</string>
     <string name="profile_images">http://&profile_server;/</string>
 
     <string name="retrieve_nandgrams">http://&server;NandgramService/getNandgramList/</string>
     <string name="insert_attendance">http://&server;NandgramService/addAttendance/</string>
     <string name="get_attendance">http://&server;NandgramService/getAttendance/</string>
-    <string name="get_day_attendance">http://&server;NandgramService/getNandgramDayAttendance/</string>
+    <string name="get_day_attendance">http://&server;NandgramService/getNandgramAttendance/</string>
 
 
     <string name="navigation_drawer_open">Open navigation drawer</string>
@@ -96,7 +99,7 @@
     <string name="touched">Touched</string>
     <string name="lives">Lives</string>
     <string name="comment"> comment</string>
-    <string name="like"> Like</string>
+    <string name="like"> Likes</string>
     <string name="comments"> comments</string>
 
     <string name="profile_picture_updated">Profile Picture updated</string>

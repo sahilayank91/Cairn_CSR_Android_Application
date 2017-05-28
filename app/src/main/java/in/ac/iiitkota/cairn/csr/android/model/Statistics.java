@@ -21,7 +21,6 @@ public class Statistics {
 
 			week= new ArrayList<Long>();
 			for (int i = 0; i < jsonArray.length(); i++) {
-				;
 				week.add(jsonArray.getLong(i));
 			}
 
@@ -31,7 +30,6 @@ public class Statistics {
 
             month= new ArrayList<Long>();
             for (int i = 0; i < jsonArray.length(); i++) {
-                ;
                 month.add(jsonArray.getLong(i));
             }
 
@@ -41,7 +39,6 @@ public class Statistics {
 
             year= new ArrayList<Long>();
             for (int i = 0; i < jsonArray.length(); i++) {
-                ;
                 year.add(jsonArray.getLong(i));
             }
 
@@ -51,7 +48,6 @@ public class Statistics {
 
             week_dates= new ArrayList<Long>();
             for (int i = 0; i < jsonArray.length(); i++) {
-                ;
                 week_dates.add(jsonArray.getLong(i));
             }
 
@@ -61,7 +57,6 @@ public class Statistics {
 
             month_dates= new ArrayList<Long>();
             for (int i = 0; i < jsonArray.length(); i++) {
-                ;
                 month_dates.add(jsonArray.getLong(i));
             }
 
@@ -71,7 +66,6 @@ public class Statistics {
 
             year_dates= new ArrayList<Long>();
             for (int i = 0; i < jsonArray.length(); i++) {
-                ;
                 year_dates.add(jsonArray.getLong(i));
             }
 

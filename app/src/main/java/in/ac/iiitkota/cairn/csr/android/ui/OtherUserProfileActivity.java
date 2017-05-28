@@ -41,7 +41,7 @@ public class OtherUserProfileActivity extends AppCompatActivity {
 
         Bundle extras = getIntent().getExtras();
         user_id = extras.getLong("user_id"); //clicked item user_id
-   StatisticsSectionPagerAdapter sectionsPagerAdapter = new StatisticsSectionPagerAdapter(getFragmentManager(), "user", user_id );
+        StatisticsSectionPagerAdapter sectionsPagerAdapter = new StatisticsSectionPagerAdapter(getFragmentManager(), "user", user_id );
         ViewPager viewPager = (ViewPager) findViewById(R.id.viewpager_profile);
         CircleIndicator indicator = (CircleIndicator) findViewById(R.id.indicator);
         viewPager.setAdapter(sectionsPagerAdapter);
@@ -49,13 +49,15 @@ public class OtherUserProfileActivity extends AppCompatActivity {
 
          profileImage = (ImageView) findViewById(R.id.profile_image);
          name = (TextView) findViewById(R.id.profile_name);
-        department=(TextView) findViewById(R.id.profile_department_name);
-        summary=(TextView) findViewById(R.id.profile_summary);
-        member_since=(TextView) findViewById(R.id.profile_member_since);
+         department=(TextView) findViewById(R.id.profile_department_name);
+         summary=(TextView) findViewById(R.id.profile_summary);
+         member_since=(TextView) findViewById(R.id.profile_member_since);
 
 
     new GetProfile().execute();
     }
+
+
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
 

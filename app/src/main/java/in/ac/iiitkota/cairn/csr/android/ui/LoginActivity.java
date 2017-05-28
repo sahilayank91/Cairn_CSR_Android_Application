@@ -111,7 +111,7 @@ public class LoginActivity extends AppCompatActivity {
             try {
                 result = Server.performServerCall(getResources().getString(R.string.login_url), params, "POST");
 
-                connection=true;
+                    connection=true;
                     UserData.getInstance(getApplicationContext()).initUserData(new User(new JSONObject(result)), getApplicationContext());
 
 

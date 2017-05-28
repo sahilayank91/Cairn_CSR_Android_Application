@@ -142,7 +142,7 @@
                     android:layout_height="250dp"
                     android:layout_marginTop="10dp"
                     android:scaleType="fitXY"
-                    android:src="@drawable/dummy_headcount" />
+                    android:src="@drawable/image_not_found" />
 
                 <TextView
                     android:layout_width="match_parent"
@@ -180,7 +180,7 @@
                     android:layout_height="250dp"
                     android:layout_marginTop="10dp"
                     android:scaleType="fitXY"
-                    android:src="@drawable/dummy_headcount" />
+                    android:src="@drawable/image_not_found" />
 
             </LinearLayout>
 

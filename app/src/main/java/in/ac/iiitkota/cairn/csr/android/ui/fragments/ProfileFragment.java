@@ -3,6 +3,7 @@ package in.ac.iiitkota.cairn.csr.android.ui.fragments;
 
 import android.Manifest;
 import android.app.Dialog;
+import android.app.ProgressDialog;
 import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.graphics.Bitmap;
@@ -12,11 +13,15 @@ import android.os.AsyncTask;
 import android.os.Build;
 import android.os.Bundle;
 import android.os.Environment;
+import android.preference.PreferenceManager;
 import android.provider.MediaStore;
 import android.support.annotation.Nullable;
+import android.support.annotation.RequiresApi;
+import android.support.annotation.StringDef;
 import android.support.v4.app.ActivityCompat;
 import android.support.v4.app.Fragment;
 import android.support.v4.view.ViewPager;
+import android.support.v4.widget.SimpleCursorAdapter;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -29,6 +34,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import in.ac.iiitkota.cairn.csr.android.adapter.StatisticsSectionPagerAdapter;
+import in.ac.iiitkota.cairn.csr.android.model.User;
 import in.ac.iiitkota.cairn.csr.android.model.UserData;
 import in.ac.iiitkota.cairn.csr.android.model.UserProfile;
 import in.ac.iiitkota.cairn.csr.android.utilities.PathUti;
@@ -108,9 +114,11 @@ public class ProfileFragment extends Fragment {
                 btnUpdate.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
-                        String newDepartment = etDepartment.getText().toString();
-                        String newSummary = etSummary.getText().toString();
-                        //
+                      String newDepartment = etDepartment.getText().toString();
+                      String newSummary = etSummary.getText().toString();
+                        new updateDept().execute(newDepartment,newSummary);
+                        dialog.dismiss();
+
                     }
                 });
 
@@ -126,7 +134,7 @@ public class ProfileFragment extends Fragment {
             }
         });
         week_fragment =new SmilesFragment();
-      month_fragment =new SmilesFragment();
+        month_fragment =new SmilesFragment();
         year_fragment =new SmilesFragment();
         StatisticsSectionPagerAdapter sectionsPagerAdapter = new StatisticsSectionPagerAdapter(getActivity().getFragmentManager(), "user", UserData.getInstance(getContext()).getUser_id());
 
@@ -322,6 +330,58 @@ public class ProfileFragment extends Fragment {
                 e.printStackTrace();
             }
             return response;
+        }
+    }
+
+
+
+    class updateDept extends AsyncTask<String,String,String>{
+        boolean success = false;
+        ProgressDialog progressDialog = new ProgressDialog(getContext());
+        HashMap<String,String> params = new HashMap<>();
+        @RequiresApi(api = Build.VERSION_CODES.N)
+        @Override
+        protected String doInBackground(String... s) {
+            params.put("user_dept",s[0]);
+            params.put("user_summary",s[1]);
+            params.put("user_id",String.valueOf(UserData.getInstance(getContext()).getUser_id()));
+
+            String result = "";
+            try {
+                result = Server.performServerCall(getResources().getString(R.string.update_profile_url), params, "POST");
+               // UserData.getInstance(getContext()).initUserData(new User(new JSONObject(result)), getContext());
+                success = true;
+                return result;
+
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+
+
+            return null;
+        }
+
+        @Override
+        protected void onPostExecute(String s) {
+            super.onPostExecute(s);
+            progressDialog.dismiss();
+
+            if(success){
+                Toast.makeText(getContext(),"Information updated successfully",Toast.LENGTH_LONG).show();
+
+            }else{
+                Toast.makeText(getContext(),"Updation Failed", Toast.LENGTH_LONG).show();
+            }
+        }
+
+        @Override
+        protected void onPreExecute() {
+            super.onPreExecute();
+
+            progressDialog.setMessage("Updating Details");
+            progressDialog.setTitle("Updating..");
+            progressDialog.show();
+
         }
     }
 

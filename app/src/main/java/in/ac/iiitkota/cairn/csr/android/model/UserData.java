@@ -1,6 +1,7 @@
 package in.ac.iiitkota.cairn.csr.android.model;
 
 import android.content.Context;
+import android.util.Log;
 
 import in.ac.iiitkota.cairn.csr.android.SharedPreferenceSingleton;
 
@@ -13,7 +14,6 @@ public class UserData {
     private int account_level;
     private Long user_id;
     private Context context;
-    Boolean verify;
 
 
     private UserData() {
@@ -79,14 +79,13 @@ public class UserData {
             this.contact = SharedPreferenceSingleton.getInstance(context).getString("contact");
             this.email = SharedPreferenceSingleton.getInstance(context).getString("email");
             this.account_level=SharedPreferenceSingleton.getInstance(context).getInt("account_level");
-            this.verify = SharedPreferenceSingleton.getInstance(context).getBoolean("verified");
             this.department = SharedPreferenceSingleton.getInstance(context).getString("department");
 
         } catch (Exception e) {
             e.printStackTrace();
             return false;
         }
-        if(this.user_id==0 || this.verify==false)return false;
+        if(this.user_id==0)return false;
         return true;
     }
 
@@ -134,11 +133,5 @@ public class UserData {
         SharedPreferenceSingleton.getInstance(context).put("account_level", account_level);
     }
 
-    public void setVerify(Boolean verify){
-        this.verify = verify;
-    }
 
-    public Boolean getVerify(){
-        return this.verify;
-    }
 }

@@ -7,6 +7,7 @@ import android.content.SharedPreferences;
 import android.content.res.Configuration;
 import android.os.Bundle;
 import android.preference.PreferenceManager;
+import android.service.textservice.SpellCheckerService;
 import android.support.annotation.NonNull;
 import android.support.design.widget.BottomNavigationView;
 import android.support.design.widget.NavigationView;
@@ -23,6 +24,11 @@ import android.support.v7.widget.Toolbar;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.textservice.SentenceSuggestionsInfo;
+import android.view.textservice.SpellCheckerSession;
+import android.view.textservice.SuggestionsInfo;
+import android.view.textservice.TextInfo;
+import android.view.textservice.TextServicesManager;
 import android.widget.TextView;
 
 import java.util.Arrays;
@@ -39,7 +45,7 @@ import in.ac.iiitkota.cairn.csr.android.ui.fragments.NewsFeedFragment;
 import in.ac.iiitkota.cairn.csr.android.ui.fragments.ProfileFragment;
 
 public class MainActivity extends AppCompatActivity
-        implements NavigationView.OnNavigationItemSelectedListener {
+        implements NavigationView.OnNavigationItemSelectedListener{
     FragmentManager fragmentManager;
 
     private BottomNavigationView bottomNavigationView;
@@ -53,6 +59,8 @@ public class MainActivity extends AppCompatActivity
     private String selectedLanguage;
 
 
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -60,6 +68,7 @@ public class MainActivity extends AppCompatActivity
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
         getSupportActionBar().setTitle(R.string.app_name);
+
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
@@ -148,6 +157,7 @@ public class MainActivity extends AppCompatActivity
                 .replace(R.id.main_container, fragment)
                 .commit();
     }
+
 
     @Override
     public void onBackPressed() {

@@ -21,6 +21,8 @@ public class NandGharStatsActivity extends AppCompatActivity {
     private AttendanceFragment week_fragment, month_fragment, year_fragment;
 
     private LinearLayout statsTextHolder;
+    private Long nandgram_id;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -30,7 +32,7 @@ public class NandGharStatsActivity extends AppCompatActivity {
         setSupportActionBar(toolbar);
         getSupportActionBar().setTitle(R.string.nandghar_stat);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-
+        nandgram_id=getIntent().getLongExtra("nandgram_id",-1);
         week_fragment = new AttendanceFragment();
         month_fragment = new AttendanceFragment();
         year_fragment = new AttendanceFragment();
@@ -45,7 +47,9 @@ public class NandGharStatsActivity extends AppCompatActivity {
         statsTextHolder.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(NandGharStatsActivity.this, NandGharPerDayStats.class));
+                Intent i = new Intent(NandGharStatsActivity.this,NandGharPerDayStats.class);
+                i.putExtra("nandgram_id",nandgram_id);
+                startActivity(i);
             }
         });
 

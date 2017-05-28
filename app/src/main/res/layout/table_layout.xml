@@ -37,6 +37,7 @@
                     android:textColor="@color/colorAccent" />
 
                 <TextView
+                    android:id="@+id/tot_smile"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:paddingBottom="10dp"
@@ -69,6 +70,7 @@
                     android:textColor="@color/colorAccent" />
 
                 <TextView
+                    android:id="@+id/tot_team"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:paddingBottom="10dp"
@@ -113,6 +115,7 @@
                     android:textColor="@color/colorAccent" />
 
                 <TextView
+                    android:id="@+id/tot_member"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:paddingBottom="10dp"
@@ -145,6 +148,7 @@
                     android:textColor="@color/colorAccent" />
 
                 <TextView
+                    android:id="@+id/team"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:paddingBottom="10dp"

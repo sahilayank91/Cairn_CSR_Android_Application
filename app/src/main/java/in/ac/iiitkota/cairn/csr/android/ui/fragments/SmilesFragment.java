@@ -73,7 +73,7 @@ public  class SmilesFragment extends Fragment {
         chart.setOnValueTouchListener(new ValueTouchListener());
         chart.setZoomEnabled(false);
         created=true;
-         title=(TextView)rootView.findViewById(R.id.graph_title);
+        title=(TextView)rootView.findViewById(R.id.graph_title);
 
 
         resetViewport();
@@ -105,7 +105,6 @@ public  class SmilesFragment extends Fragment {
                 values.add(new SubcolumnValue(head_count.get(i), getColorSelect(i)));
                 Column column = new Column(values);
                 column.setHasLabels(head_count.get(i)!=0);
-
                 column.setHasLabelsOnlyForSelected(hasLabelForSelected);
                 columns.add(column);
             }
@@ -125,8 +124,6 @@ public  class SmilesFragment extends Fragment {
             }
             data.setAxisXBottom(axisX);
             data.setAxisYLeft(axisY);
-
-
             chart.setColumnChartData(data);
 
         }

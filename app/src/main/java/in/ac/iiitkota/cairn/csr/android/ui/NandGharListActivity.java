@@ -75,7 +75,9 @@ public class NandGharListActivity extends AppCompatActivity implements RCVItemCl
 
         switch (view.getId()) {
             case R.id.data_holder:
-                startActivity(new Intent(this, NandGharStatsActivity.class));
+                Intent i = new Intent(this,NandGharStatsActivity.class);
+                i.putExtra("nandgram_id",listNandgrams.get(position).getNandgram_id());
+                startActivity(i);
                 break;
             case R.id.btn_add_attendance:
                 Intent intent=new Intent(this, AddAttendance.class);

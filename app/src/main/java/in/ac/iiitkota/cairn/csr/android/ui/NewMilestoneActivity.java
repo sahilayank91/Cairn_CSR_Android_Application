@@ -63,7 +63,7 @@ import java.util.ArrayList;
 import java.util.Date;
 import java.util.HashMap;
 
-public class NewMilestoneActivity extends AppCompatActivity implements CheckboxCheckChangeListener, BottomSheetClickListener {
+public class NewMilestoneActivity extends AppCompatActivity implements CheckboxCheckChangeListener, BottomSheetClickListener{
 
 
     private static final int PICK_IMAGE = 2;
