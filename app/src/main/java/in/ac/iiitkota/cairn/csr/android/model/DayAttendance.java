@@ -3,7 +3,7 @@ package in.ac.iiitkota.cairn.csr.android.model;
 import org.json.JSONException;
 import org.json.JSONObject;
 
-import java.util.Date;
+
 
 
 
@@ -21,10 +21,6 @@ public class DayAttendance{
             if(author.has("slot1_image"))this.slot1_image = author.getString("slot1_image");
             if(author.has("slot2_image"))this.slot2_image = author.getString("slot2_image");
 	}
-	
-	
-	
-	
 
 	public Long getTime() {
 		return time;

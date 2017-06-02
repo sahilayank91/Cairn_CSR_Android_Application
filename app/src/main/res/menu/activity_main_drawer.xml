@@ -17,6 +17,11 @@
         android:title="@string/nandghar" />
 
     <item
+        android:id="@+id/nav_cairn_dept"
+        android:icon="@drawable/ic_list_black_24dp"
+        android:title="Water Departments"/>
+
+    <item
         android:id="@+id/nav_change_lang"
         android:icon="@drawable/ic_audiotrack_light"
         android:title="@string/change_lang"/>

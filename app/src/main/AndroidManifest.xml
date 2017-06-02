@@ -13,9 +13,9 @@
         android:allowBackup="true"
         android:icon="@mipmap/logo"
         android:label="@string/app_name"
+        android:largeHeap="true"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:largeHeap="true"
         android:theme="@style/AppTheme">
         <meta-data
             android:name="com.google.android.gms.vision.DEPENDENCIES"
@@ -43,10 +43,7 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity
-            android:name=".ChangeLanguage.ChangeLanguageActivity"
-            android:label="Change Language"
-            android:theme="@style/AppTheme.NoActionBar" />
+
         <activity
             android:name=".ui.RegistrationActivity"
             android:screenOrientation="portrait"
@@ -104,7 +101,8 @@
         <activity
             android:name=".ui.NandGharPerDayStats"
             android:label="@string/title_activity_nand_ghar_per_day_stats"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
+            android:theme="@style/AppTheme.NoActionBar" />
+
         <service android:name=".push_notifications.CairnFirebaseMessagingService">
             <intent-filter>
                 <action android:name="com.google.firebase.MESSAGING_EVENT" />
@@ -115,6 +113,19 @@
                 <action android:name="com.google.firebase.INSTANCE_ID_EVENT" />
             </intent-filter>
         </service>
+
+        <activity
+            android:name=".ui.WaterDepartmentDetailActivity"
+            android:label="Water Departments"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".ui.CairnDepartmentsActivity"
+            android:label= "@string/title_activity_cairn_departments"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".ui.DepartmentLocationList"
+            android:label="@string/title_activity_department_location_list"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
     </application>
 
 </manifest>

@@ -16,4 +16,6 @@
     <dimen name="profile_image_width">150dp</dimen>
     <dimen name="profile_image_height">150dp</dimen>
     <dimen name="app_bar_height">180dp</dimen>
+    <dimen name="tile_padding">8dp</dimen>
+    <dimen name="tile_height">160dp</dimen>
 </resources>
