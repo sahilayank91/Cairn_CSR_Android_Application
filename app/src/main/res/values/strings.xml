@@ -133,7 +133,7 @@
     <string name="people_liked">People liked this post</string>
     <string name="post_share_successful">Post shared Successfully</string>
     <string name="post_share_unsuccessful">Sorry! The post could not be shared!</string>
-<string name="one_comment">1 comment</string>
+    <string name="one_comment">1 comment</string>
     <string name="one_like">1 Like</string>
     <string name="milestone_add">Add Milestone</string>
     <string name="milestone_edit">Edit Milestone</string>
@@ -180,9 +180,6 @@
     <string name="jan_sanvaad">Jan Sanvaad</string>
     <string name="education">Education</string>
     <string name="milk">Milk</string>
-
-
-
 
 
     <!-- TODO: New XML elements-->
@@ -238,5 +235,51 @@
         <item>Women Empoverment</item>
         <item>Cairn India CSR</item>
     </string-array>
+    <string name="title_activity_cairn_departments">CairnDepartments</string>
+
+
+    <string-array name="water_departments">
+        <item>Fontus</item>
+        <item>Water Life</item>
+    </string-array>
+
+    <string-array name="water_dept_logo">
+        <item>@drawable/fontus</item>
+        <item>@drawable/waterlife</item>
+    </string-array>
+    <string name="title_activity_department_location_list">DepartmentLocationList</string>
+    
+    
+    <string-array name="fontus_area">
+        <item>Fontus Araba</item>
+        <item>Fontus Budwa</item>
+        <item>Fontus Kanana</item>
+        <item>Fontus Khardi</item>
+        <item>Fontus Kharntiya</item>
+        <item>Fontus Kolu</item>
+        <item>Fontus Madhasar</item>
+        <item>Fontus Navatala</item>
+        <item>Fontus Navedabera</item>
+        <item>Fontus Pachpadra</item>
+        <item>Fontus Patasar</item>
+        <item>Fontus Sevniyala</item>
+    </string-array>
+
+    <string-array name="fontus_launch_dates">
+        <item>5-Aug-16</item>
+        <item>30-Jun-16</item>
+        <item>13-Jul-16</item>
+        <item>20-Jul-16</item>
+        <item>5-Jul-16</item>
+        <item>9-Jun-16</item>
+        <item>10-Jul-16</item>
+        <item>1-Aug-16</item>
+        <item>25-Jul-16</item>
+        <item>25-Jun-16</item>
+        <item>17-Jul-16</item>
+        <item>15-Jun-16</item>
+    </string-array>
+    
+
 
 </resources>
